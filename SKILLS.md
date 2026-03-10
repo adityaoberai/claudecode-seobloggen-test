@@ -77,6 +77,17 @@ Most posts follow this flow:
 
 ---
 
+## Example Blogs (Style References)
+
+These two posts from the Appwrite blog represent the target style:
+
+- [Password Protection](https://appwrite.io/blog/post/password-protection.md) — Security-focused post with practical developer guidance, clear section structure, and no marketing fluff.
+- [Push Notifications Best Practices](https://appwrite.io/blog/post/push-notifications-best-practices.md) — Feature-focused post demonstrating how to explain Appwrite capabilities in context, with concrete implementation details.
+
+When writing a new post, refer to these to calibrate tone, section depth, and how Appwrite features are introduced and explained.
+
+---
+
 ## Common Pitfalls to Avoid
 
 - Starting with "In this post, we will..." — just start with the argument.
