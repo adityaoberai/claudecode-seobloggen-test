@@ -37,7 +37,7 @@ The filename (slug) must match the `cover` image path: e.g. `avoid-backend-overe
 
 1. **Hook** — Open with the real problem or a common misconception. No preamble.
 2. **Establish the cost** — Why this problem matters in practice.
-3. **Break it down** — Use H2/H3 sections to cover each dimension clearly.
+3. **Break it down** — Use H1/H2 sections to cover each dimension clearly.
 4. **Concrete guidance** — What to actually do. Be specific.
 5. **Close with a combined CTA and resources section** — Merge "Moving forward" and "Resources" into one section. The heading must be specific to the post's topic (e.g. "Getting started with Appwrite Auth", not "Moving forward"). End with 2-4 relevant doc links fetched from `https://appwrite.io/llms.txt`. Only link to pages directly relevant to the post. Do not include generic links to the homepage, Discord, or GitHub unless nothing more specific exists.
 
@@ -46,7 +46,7 @@ The filename (slug) must match the `cover` image path: e.g. `avoid-backend-overe
 - Use `**bold**` for key terms and important callouts within paragraphs.
 - Use bullet lists for enumerating capabilities, trade-offs, or steps — not for general prose.
 - Avoid nested lists unless strictly necessary.
-- Use H2 (`##`) for major sections, H3 (`###`) for subsections.
+- Use H1 (`#`) for major sections, H2 (`##`) for subsections.
 - Link to official docs for referenced features: e.g. `[Appwrite Sites](https://appwrite.io/docs/products/sites)`.
 - Keep paragraphs short: 2-4 sentences as a rule.
 - **No em dashes.** Do not use `—` anywhere. Rewrite the sentence to avoid it using a period, comma, or restructured clause.
@@ -57,7 +57,7 @@ The filename (slug) must match the `cover` image path: e.g. `avoid-backend-overe
 - **Title:** Include the primary keyword naturally. Keep it under 60 characters. Front-load the keyword when possible (e.g. "JWT Authentication with Appwrite" not "Using Appwrite to Do JWT Authentication").
 - **Description frontmatter:** Write 1 sentence, 140-160 characters, that includes the primary keyword and clearly states what the reader will learn or get.
 - **Slug:** Short, keyword-rich, hyphen-separated. Match the exact topic (e.g. `appwrite-jwt-auth`, not `how-to-do-authentication-in-your-app-using-appwrite`).
-- **Headings:** Use the primary keyword in at least one H2. Headings should reflect real search queries developers type, not internal jargon.
+- **Headings:** Use the primary keyword in at least one H1 or H2. Headings should reflect real search queries developers type, not internal jargon.
 - **Search intent:** Match the post type to intent. A "how to" post should answer a specific task. A comparison post should help the reader make a decision. Do not write a conceptual post when developers are searching for a tutorial.
 - **Internal links:** Link to at least one other relevant Appwrite blog post or doc page from within the body, not just the closing section.
 
@@ -71,6 +71,8 @@ The filename (slug) must match the `cover` image path: e.g. `avoid-backend-overe
 ## Appwrite documentation reference
 
 **Always fetch `https://appwrite.io/llms.txt` before writing a new post.** Use it to find the specific doc pages relevant to that post's topic, then link only to those. Every resource link in a post must be directly relevant to what the post covers. A post about authentication should link to auth docs; a post about storage should link to storage docs. Do not add links to Discord, GitHub, or the homepage unless nothing more specific exists.
+
+**Prioritize Appwrite Cloud over self-hosting.** When linking to Appwrite, prefer `https://cloud.appwrite.io` over self-hosting documentation. Include a Cloud signup link in the resources section of every post unless the post is specifically about self-hosting or a compliance use case where self-hosting is the core recommendation (e.g. HIPAA, data residency). In CTAs and inline mentions, refer to Appwrite Cloud first and self-hosting as a secondary option.
 
 ## Adding a new blog
 
@@ -124,7 +126,7 @@ These posts represent the target style:
 - Ending with "Let us know your thoughts!" — this blog doesn't use that style.
 - Using passive voice where active voice is clearer.
 - Writing section headers as questions — use declarative headers instead.
-- Using em dashes (`—`) anywhere in the post. Use commas, parentheses, periods, or semicolons instead as appropriate.
+- Using em dashes (`—`) anywhere in the post. Use commas, parentheses, periods, colons, or semicolons instead as appropriate.
 - Generic closing headers like "Moving forward", "Conclusion", or "Next steps". The final section heading must be specific to the post's topic.
 - Repeating the same CTA phrasing across posts. The closing paragraph should reflect the post's specific argument, not a boilerplate Appwrite pitch.
 - Linking to Discord, GitHub, or the Appwrite homepage as filler resources. Only include links the reader would actually click given the post's topic.
