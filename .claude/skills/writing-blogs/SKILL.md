@@ -7,7 +7,7 @@ description: Writes, structures, and formats SEO-optimized blog posts for the Ap
 
 ## Blog structure
 
-Each blog is a Markdown file in the `blogs/` directory. Every file must start with this frontmatter:
+Each blog lives in its own folder under `blogs/`, named after its slug. The content file is always `+page.markdoc` inside that folder (e.g. `blogs/my-post-slug/+page.markdoc`). Every file must start with this frontmatter:
 
 ```yaml
 ---
@@ -86,7 +86,7 @@ Copy this checklist and check off items as you complete them:
 Blog Creation Progress:
 - [ ] Step 1: Fetch https://appwrite.io/llms.txt to find relevant doc links
 - [ ] Step 2: Add the title to BLOG_TITLES.md
-- [ ] Step 3: Create blogs/<slug>.md with correct frontmatter
+- [ ] Step 3: Create blogs/<slug>/+page.markdoc with correct frontmatter
 - [ ] Step 4: Write the post following the structure and tone guidelines
 - [ ] Step 5: Verify accuracy of all Appwrite-specific claims against the fetched docs
 - [ ] Step 6: Verify slug consistency across filename, cover image path, and internal links
@@ -102,7 +102,7 @@ Add the title (one title per line; currently uses `N->Title` format).
 
 **Step 3: Create the file**
 
-Create `blogs/<slug>.md` with the frontmatter template from "Blog structure" above.
+Create a folder `blogs/<slug>/` and inside it create `+page.markdoc` with the frontmatter template from "Blog structure" above. All blog content must be written in `blogs/<slug>/+page.markdoc`.
 
 **Step 4: Write the post**
 
