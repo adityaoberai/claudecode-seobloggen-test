@@ -61,6 +61,10 @@ The filename (slug) must match the `cover` image path: e.g. `avoid-backend-overe
 - **Search intent:** Match the post type to intent. A "how to" post should answer a specific task. A comparison post should help the reader make a decision. Do not write a conceptual post when developers are searching for a tutorial.
 - **Internal links:** Link to at least one other relevant Appwrite blog post or doc page from within the body, not just the closing section.
 
+## What is Appwrite
+
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+
 ## Content guidelines
 
 - **Appwrite context:** Posts often compare Appwrite to alternatives (Firebase, Vercel, Netlify, etc.) or explain how Appwrite solves a specific developer problem. Keep comparisons fair and factual.
