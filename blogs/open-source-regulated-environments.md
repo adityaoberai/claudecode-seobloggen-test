@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Open-source tools in regulated environments: key considerations"
-description: A practical guide to evaluating open-source backend tools for regulated industries like healthcare and finance, covering maintenance, licensing, and compliance fit.
+title: "Open-source backends in regulated industries: what to check"
+description: How to evaluate open-source backend tools for regulated industries like healthcare and finance, covering maintenance cadence, licensing, and compliance fit.
 date: 2024-04-19
 cover: /images/blog/open-source-regulated-environments/cover.png
 timeToRead: 6
@@ -96,4 +96,4 @@ Choosing open-source tools for regulated environments is not inherently riskier 
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
 - [Appwrite Security overview](https://appwrite.io/docs/advanced/security)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

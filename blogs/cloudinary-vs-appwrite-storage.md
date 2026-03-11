@@ -99,4 +99,4 @@ Both tools are good at what they're designed for. The trade-offs are about fit, 
 - [Appwrite Storage documentation](https://appwrite.io/docs/products/storage)
 - [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
 - [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

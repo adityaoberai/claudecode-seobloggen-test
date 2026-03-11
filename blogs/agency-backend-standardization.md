@@ -82,4 +82,4 @@ Standardization is one of the highest-leverage decisions an agency can make. The
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite CLI docs](https://appwrite.io/docs/tooling/command-line/installation)
 - [Appwrite Sites documentation](https://appwrite.io/docs/products/sites)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

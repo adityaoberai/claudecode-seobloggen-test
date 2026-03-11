@@ -97,4 +97,4 @@ Building a backend that scales is about avoiding known antipatterns: stateful se
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
 - [Appwrite Functions docs](https://appwrite.io/docs/products/functions)
 - [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

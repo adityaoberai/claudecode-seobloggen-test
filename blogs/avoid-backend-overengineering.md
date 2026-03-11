@@ -96,6 +96,6 @@ The best thing a small team can do for their backend is make it boring as quickl
 [Appwrite](https://appwrite.io) is built around this philosophy. Instead of asking development teams to assemble and maintain multiple backend services, it provides authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging in a single, unified platform. Your team writes the code that matters for your product and delegates the solved infrastructure problems to a platform that handles them correctly. Start on [Appwrite Cloud](https://cloud.appwrite.io) to get set up in minutes, or explore the [documentation](https://appwrite.io/docs) to see the full capabilities.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)
 - [Appwrite Functions docs](https://appwrite.io/docs/products/functions)
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)

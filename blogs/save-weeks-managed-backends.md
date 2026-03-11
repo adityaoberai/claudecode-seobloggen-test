@@ -119,6 +119,6 @@ The decision to use a managed backend platform is a decision about where to spen
 [Appwrite](https://appwrite.io) covers the full backend layer: authentication, databases, file storage, serverless functions, real-time, and messaging. It can be set up in hours and extended as your application grows. [Appwrite Cloud](https://cloud.appwrite.io) provides a fully managed hosting experience; self-hosting is available when control or compliance requirements demand it.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [Appwrite Functions docs](https://appwrite.io/docs/products/functions)

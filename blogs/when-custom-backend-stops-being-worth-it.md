@@ -73,4 +73,4 @@ The question isn't whether building a custom backend was wrong. It was probably 
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

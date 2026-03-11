@@ -100,4 +100,4 @@ Internal tools don't have to be slow to build. The key is separating the logic t
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [Appwrite Console documentation](https://appwrite.io/docs/tooling/console)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

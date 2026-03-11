@@ -96,4 +96,4 @@ Choosing Firebase is not a mistake. It's a trade-off: lock-in for developer expe
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
 - [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

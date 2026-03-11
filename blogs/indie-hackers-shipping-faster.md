@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Indie Hackers Are Shipping Apps Faster Than Ever"
-description: The tools, habits, and decisions that let solo developers and small teams ship production-ready applications in days instead of months, and what the fastest builders share.
+description: The tools, habits, and shipping decisions that let solo developers and small teams get production-ready applications in front of users in days, not months.
 date: 2024-08-02
 cover: /images/blog/indie-hackers-shipping-faster/cover.png
 timeToRead: 6
@@ -83,6 +83,6 @@ Shipping fast is a skill, but it's also a set of choices. The choice to use a ba
 [Appwrite](https://appwrite.io) covers authentication with 30+ OAuth providers, a document-oriented database, file storage, serverless functions, and messaging in one integration. [Appwrite Cloud](https://cloud.appwrite.io) has a free tier sufficient for most early-stage applications, and SDK support for web, mobile, and server environments means you're not rewriting backend logic for different clients.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [Appwrite Functions docs](https://appwrite.io/docs/products/functions)

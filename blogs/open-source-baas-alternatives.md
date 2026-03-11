@@ -77,4 +77,4 @@ Open-source BaaS platforms have closed most of the capability gap that once made
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

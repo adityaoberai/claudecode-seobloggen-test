@@ -88,6 +88,6 @@ The decision between managed SaaS and open-source self-hosted is not a permanent
 [Appwrite](https://appwrite.io) is built for exactly this path. [Appwrite Cloud](https://cloud.appwrite.io) provides a fully managed experience for teams that want to start without infrastructure concerns. The same platform is fully self-hostable when your requirements change. The APIs, SDKs, and data models are identical, so migrating between deployment modes doesn't require rewriting your application.
 
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)

@@ -119,4 +119,4 @@ Evaluating backend tools with lock-in in mind doesn't mean being paralyzed or av
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
-- [Appwrite Cloud](https://cloud.appwrite.io)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

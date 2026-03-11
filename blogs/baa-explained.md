@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BAA explained: what it is and when you need one"
-description: A practical guide to Business Associate Agreements for developers building healthcare apps, covering what they cover, when they apply, and how teams handle them.
+description: A practical guide to Business Associate Agreements for developers building healthcare apps, covering what they include, when they apply, and how to get them.
 date: 2024-03-15
 cover: /images/blog/baa-explained/cover.png
 timeToRead: 7
