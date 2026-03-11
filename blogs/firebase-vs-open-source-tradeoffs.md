@@ -1,18 +1,19 @@
 ---
 layout: post
-title: "What developers trade off when choosing Firebase over open source"
-description: An honest look at the real trade-offs developers make when choosing Firebase — vendor lock-in, pricing at scale, data ownership — and what open-source alternatives offer instead.
+title: "Firebase vs open source: the trade-offs developers miss"
+description: An honest look at the trade-offs developers make when choosing Firebase: vendor lock-in, pricing at scale, and data ownership versus open-source alternatives.
 date: 2024-07-12
 cover: /images/blog/firebase-vs-open-source-tradeoffs/cover.png
 timeToRead: 7
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Firebase is often the first backend platform developers reach for. The documentation is good, the quickstart experience is fast, and the combination of real-time database, authentication, and hosting in one place made it genuinely novel when it launched. Millions of applications are built on it, and for many use cases it continues to be a reasonable choice.
 
-But Firebase involves trade-offs that aren't obvious at the start — trade-offs that become more significant as applications grow. This post is about what those trade-offs actually are, so developers can make informed decisions about them rather than discovering them later.
+But Firebase involves trade-offs that aren't obvious at the start, and they become more significant as applications grow. Understanding what those trade-offs actually are lets developers make informed decisions rather than discovering the costs later.
 
 ## What Firebase does well
 
@@ -86,14 +87,13 @@ Firebase remains a strong choice for:
 - **Applications that stay small.** If your application has modest scale and your data access patterns are well-controlled, Firebase's pricing can be quite reasonable.
 - **Teams already deeply invested in Google Cloud.** If your team has expertise in Google Cloud and Firebase, the ecosystem integration value is real.
 
-## Moving forward
+## Switch from Firebase before lock-in compounds into a migration project
 
-Choosing Firebase is not a mistake — it's a trade-off. The trade-offs are: lock-in for developer experience, pricing variability for managed scale, and Google's platform choices for infrastructure quality. Whether those trade-offs are worth it depends on your specific situation.
+Choosing Firebase is not a mistake. It's a trade-off: lock-in for developer experience, pricing variability for managed scale, and Google's platform choices for infrastructure quality. Whether those trade-offs are worth it depends on your specific situation.
 
-[Appwrite](https://appwrite.io) is a Firebase alternative that's open source, self-hostable, and actively developed. It provides authentication with 30+ OAuth providers, a document-oriented database with real-time subscriptions, file storage with permission controls, serverless functions, and messaging — comparable in breadth to Firebase's feature set, without Firebase's lock-in or pricing model. Start on [Appwrite Cloud](https://cloud.appwrite.io) for a managed experience, or self-host when your requirements demand it.
+[Appwrite](https://appwrite.io) is a Firebase alternative that's open source, self-hostable, and actively developed. It provides authentication with 30+ OAuth providers, a document-oriented database with real-time subscriptions, file storage with permission controls, serverless functions, and messaging. Start on [Appwrite Cloud](https://cloud.appwrite.io) for a managed experience, or self-host when your requirements demand it.
 
-## Resources
-
-- [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
+- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Appwrite Cloud](https://cloud.appwrite.io)

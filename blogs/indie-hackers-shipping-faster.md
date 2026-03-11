@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "How Indie Hackers Are Shipping Apps Faster Than Ever"
-description: The tools, habits, and decisions that let solo developers and small teams ship production-ready applications in days instead of months.
+description: The tools, habits, and decisions that let solo developers and small teams ship production-ready applications in days instead of months, and what the fastest builders share.
 date: 2024-08-02
 cover: /images/blog/indie-hackers-shipping-faster/cover.png
 timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Something has shifted in the past few years in independent software development. Solo developers and two-person teams are shipping products that used to require a 10-person engineering team. They're launching in weeks instead of months, getting to first paying customer faster than ever, and doing it without burning out on infrastructure work.
@@ -75,15 +76,13 @@ Across the indie hacker community — on Twitter, on Indie Hackers, in product-f
 - They have strong opinions about their personal stack and don't reevaluate it every project
 - They ship publicly and use the feedback to decide what to build next
 
-## Moving forward
+## Use a backend platform to eliminate the infrastructure bottleneck
 
-Shipping fast is a skill, but it's also a set of choices. The choice to use a backend platform instead of a custom API, a component library instead of custom CSS, and a managed deployment service instead of a custom server configuration — each of these is a compound decision that multiplies across every hour spent building.
+Shipping fast is a skill, but it's also a set of choices. The choice to use a backend platform instead of a custom API, a component library instead of custom CSS, and a managed deployment service instead of a custom server configuration: each of these is a compound decision that multiplies across every hour spent building.
 
-[Appwrite](https://appwrite.io) is the backend platform of choice for many indie developers precisely because it covers so much ground in one integration: authentication with 30+ OAuth providers, a document-oriented database, file storage, serverless functions, and messaging. [Appwrite Cloud](https://cloud.appwrite.io) has a free tier that's sufficient for most early-stage applications, and the SDK support for web, mobile, and server environments means you're not rewriting backend logic for different clients. If you're building your next product, start with [Appwrite's quickstart guides](https://appwrite.io/docs) and see how quickly the infrastructure layer can be behind you.
-
-## Resources
+[Appwrite](https://appwrite.io) covers authentication with 30+ OAuth providers, a document-oriented database, file storage, serverless functions, and messaging in one integration. [Appwrite Cloud](https://cloud.appwrite.io) has a free tier sufficient for most early-stage applications, and SDK support for web, mobile, and server environments means you're not rewriting backend logic for different clients.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Cloud](https://cloud.appwrite.io)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Functions docs](https://appwrite.io/docs/products/functions)

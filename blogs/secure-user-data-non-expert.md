@@ -8,11 +8,12 @@ timeToRead: 7
 author: aditya-oberai
 category: security
 featured: false
+unlisted: true
 ---
 
 Security is one of those topics that can feel overwhelming for developers who didn't specialize in it. The threat landscape is complex, the terminology is opaque, and the stakes feel high. But most application security incidents don't happen because developers lacked advanced security knowledge — they happen because basic, well-understood security practices weren't followed.
 
-This post is about the practical steps that move a typical web application from "probably has exploitable vulnerabilities" to "applies current best practices" — without requiring a security engineering background.
+The practical steps below move a typical web application from "probably has exploitable vulnerabilities" to "applies current best practices" without requiring a security engineering background.
 
 ## Why security feels harder than it is
 
@@ -113,13 +114,11 @@ For developers who aren't security specialists, Appwrite handles the authenticat
 - **Granular permissions**: Appwrite's permission system lets you define exactly which users or teams can read, create, update, or delete each resource. Authorization bugs — users accessing data they shouldn't — are prevented at the data layer, not just the UI.
 - **Password policies**: Minimum password length, password history, and dictionary checks can be configured to prevent weak or reused credentials.
 
-## Moving forward
+## Apply consistent security practices to protect users without a security team
 
 Securing user data doesn't require becoming a security specialist. It requires applying a set of well-documented practices consistently: use managed authentication, enforce least-privilege access, update dependencies, use HTTPS, protect secrets, and validate inputs. With Appwrite handling the authentication and access control layer, your security surface area shrinks to the parts of your application that are genuinely unique.
 
-## Resources
-
 - [Appwrite Authentication documentation](https://appwrite.io/docs/products/auth)
-- [Appwrite Discord](https://appwrite.io/discord)
+- [Appwrite Security overview](https://appwrite.io/docs/advanced/security)
+- [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
 - [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)

@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "BAA explained: what it is, when you need it, and how teams approach it"
-description: A practical guide to Business Associate Agreements for developers building healthcare and compliance-sensitive applications.
+title: "BAA explained: what it is and when you need one"
+description: A practical guide to Business Associate Agreements for developers building healthcare apps, covering what they cover, when they apply, and how teams handle them.
 date: 2024-03-15
 cover: /images/blog/baa-explained/cover.png
 timeToRead: 7
 author: aditya-oberai
 category: security
 featured: false
+unlisted: true
 ---
 
 If you've ever built a product that touches healthcare data, you've probably heard the term "BAA" thrown around — often by a legal team, sometimes by a prospective enterprise customer, and occasionally in a sales call that suddenly got very serious. But what exactly is a Business Associate Agreement, and when does your team actually need one?
@@ -86,9 +87,11 @@ For teams building in compliance-sensitive environments, Appwrite's self-hosting
 
 Appwrite's built-in authentication handles session management, Argon2 password hashing, and OAuth integrations. Its database and file storage operate within your own deployment boundary. Its serverless functions execute within your infrastructure perimeter. For healthcare teams that need to demonstrate control over where PHI lives and who can access it, Appwrite's self-hosting model provides a practical, auditable path forward.
 
-## Resources
+## Build your HIPAA-compliant backend with full data control
+
+BAAs are not a checkbox, they're a signal that your infrastructure was designed with data accountability in mind. When you self-host Appwrite within your own cloud account or on-premise infrastructure, your data never leaves your controlled environment. The primary BAA relationship becomes the underlying cloud provider where Appwrite runs, not a separate backend vendor with its own sub-processors and data handling policies. This makes the compliance conversation cleaner and the audit trail shorter.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [HHS HIPAA Business Associate Guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html)

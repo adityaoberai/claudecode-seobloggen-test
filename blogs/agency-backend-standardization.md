@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "How agencies standardize backend stacks across clients"
-description: Why development agencies benefit from standardizing their backend stack, and how to choose the right platform to build consistency across diverse client projects.
+description: Why development agencies benefit from standardizing their backend stack and how to choose a platform flexible enough to serve diverse client needs.
 date: 2024-05-03
 cover: /images/blog/agency-backend-standardization/cover.png
 timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Running a development agency means context-switching constantly. One client needs an e-commerce platform, another needs a healthcare app, a third wants an internal operations tool. Each project has different requirements — but if each one also uses a different backend stack, you've built yourself an operational nightmare.
@@ -72,15 +73,13 @@ Appwrite is particularly well-suited to agency workflows:
 - **Self-hosting for regulated clients**: Agencies working with enterprise or compliance-sensitive clients can deploy Appwrite within those clients' own cloud accounts, satisfying data residency requirements without switching to a different backend stack.
 - **Client access controls**: Appwrite's team and membership system lets you give client stakeholders read or admin access to their own project without exposing your team's other client environments.
 
-## Moving forward
+## Start standardizing your agency's backend stack
 
 Standardization is one of the highest-leverage decisions an agency can make. The right backend platform becomes a multiplier on every developer's productivity across every client engagement.
 
 [Appwrite](https://appwrite.io) is particularly well-suited for agency use. Its project-based structure isolates each client's data, authentication, storage, and functions within a clean boundary. The [Appwrite CLI](https://appwrite.io/docs/tooling/command-line/installation) supports scripted project setup, making it straightforward to automate the creation of new client environments. Appwrite's self-hosting option means agencies working with enterprise or regulated clients can deploy within those clients' own cloud accounts when required. With authentication, databases, storage, functions, and messaging all in one platform, there's very little that a typical agency project requires that Appwrite doesn't cover.
 
-## Resources
-
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite CLI docs](https://appwrite.io/docs/tooling/command-line/installation)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Sites documentation](https://appwrite.io/docs/products/sites)
+- [Appwrite Cloud](https://cloud.appwrite.io)

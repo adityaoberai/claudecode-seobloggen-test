@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "How to Build a Backend That Scales Without Stress"
-description: The architectural decisions and platform choices that allow small teams to build backends that scale gracefully, without needing to manage complex infrastructure.
+description: The architectural decisions and platform choices that let small teams build backends that scale gracefully without managing complex infrastructure.
 date: 2024-09-06
 cover: /images/blog/backend-that-scales/cover.png
 timeToRead: 7
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Scaling is the word that makes early-stage developers nervous. The fear is some version of this: we build something, it gets popular, and then it falls over because we didn't plan for scale. Then we have to rewrite everything under pressure while real users are experiencing problems.
@@ -87,16 +88,13 @@ Appwrite's architecture aligns with the scaling principles outlined in this post
 - **Managed scaling on Appwrite Cloud**: Appwrite Cloud handles infrastructure scaling automatically. You're not responsible for provisioning database read replicas, scaling connection pools, or adjusting compute capacity as your user count grows.
 - **Self-hosted horizontal scaling**: If you self-host, Appwrite's Docker-based architecture supports horizontal scaling of individual services using standard container orchestration tools like Docker Swarm or Kubernetes.
 
-## Moving forward
+## Build on a platform designed to scale with your application
 
-Building a backend that scales isn't about predicting the future or implementing complex distributed systems from day one. It's about avoiding known antipatterns — stateful servers, unindexed queries, synchronous slow operations — and choosing infrastructure that scales without requiring you to manage it directly.
+Building a backend that scales is about avoiding known antipatterns: stateful servers, unindexed queries, synchronous slow operations. Choose infrastructure that scales without requiring you to manage it directly.
 
-[Appwrite](https://appwrite.io) is designed to support this model. Its managed database system handles indexes and query optimization at the platform level. Its serverless functions run asynchronously and scale based on invocation volume without requiring you to manage server capacity. File storage is managed independently of your compute layer. [Appwrite Cloud](https://cloud.appwrite.io) scales the infrastructure automatically; if you self-host, Appwrite's Docker-based deployment can be scaled horizontally using standard container orchestration. Visit the [Appwrite documentation](https://appwrite.io/docs) to explore how these capabilities apply to your specific scaling requirements.
+[Appwrite](https://appwrite.io) is designed to support this model. Its managed database system handles indexes and query optimization at the platform level. Its serverless functions run asynchronously and scale based on invocation volume without requiring you to manage server capacity. File storage is managed independently of your compute layer. [Appwrite Cloud](https://cloud.appwrite.io) scales the infrastructure automatically; if you self-host, Appwrite's Docker-based deployment can be scaled horizontally using standard container orchestration.
 
-## Resources
-
-- [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Functions docs](https://appwrite.io/docs/products/functions)
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Functions docs](https://appwrite.io/docs/products/functions)
+- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Appwrite Cloud](https://cloud.appwrite.io)

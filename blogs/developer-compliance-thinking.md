@@ -1,18 +1,19 @@
 ---
 layout: post
-title: "How developers think about compliance before talking to legal"
-description: A developer-first guide to understanding compliance requirements, identifying what applies to your application, and making informed decisions before your legal review.
+title: "Developer-first thinking about compliance requirements"
+description: A developer-first guide to understanding compliance requirements, identifying what applies to your application, and making informed architecture decisions.
 date: 2024-04-12
 cover: /images/blog/developer-compliance-thinking/cover.png
 timeToRead: 6
 author: aditya-oberai
 category: security
 featured: false
+unlisted: true
 ---
 
 Compliance conversations usually happen in one of two ways. Either a legal or compliance officer drops a list of requirements in a developer's lap and asks for sign-off, or a developer gets two days before a customer call to figure out if the product is GDPR compliant. Neither scenario produces good outcomes.
 
-The developers who navigate compliance well do something different: they think about it early, from a technical perspective, before the legal team is in the room. This post is about developing that habit.
+The developers who navigate compliance well think about it early, from a technical perspective, before the legal team is in the room. Developing that habit starts with understanding the frameworks that are most likely to apply to your application.
 
 ## Why developers should think about compliance first
 
@@ -89,16 +90,13 @@ For developers thinking through compliance requirements before engaging legal, A
 - **SOC 2**: Appwrite's permission system, audit logging, and encryption at rest and in transit provide a documented, implementable foundation for SOC 2's security and availability criteria.
 - **Answering the hard questions**: When an auditor asks "who has access to this data and how is it controlled?", Appwrite's explicit permission model gives you a concrete, reviewable answer rather than custom code that needs to be explained from scratch.
 
-## Moving forward
+## Map your compliance requirements to your architecture before the legal review
 
-Compliance doesn't have to be a surprise. Developers who understand the frameworks that apply to their application — even at a high level — make better technical decisions and have more productive conversations with legal teams, security reviewers, and enterprise customers.
+Compliance doesn't have to be a surprise. Developers who understand the frameworks that apply to their application make better technical decisions and have more productive conversations with legal teams, security reviewers, and enterprise customers.
 
 [Appwrite](https://appwrite.io) is an open-source backend platform built with security and privacy controls as first-class features. Its support for self-hosting, built-in GDPR-relevant features like data deletion, granular permissions, and comprehensive audit logging make it a practical foundation for applications with real compliance requirements. Explore the [Appwrite documentation](https://appwrite.io/docs) to see how its features map to the security controls your compliance framework requires.
 
-## Resources
-
-- [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Security overview](https://appwrite.io/docs/advanced/security)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [GDPR official text](https://gdpr-info.eu/)
 - [HHS HIPAA Security Rule](https://www.hhs.gov/hipaa/for-professionals/security/index.html)

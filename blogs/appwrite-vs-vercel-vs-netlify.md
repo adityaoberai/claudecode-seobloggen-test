@@ -1,18 +1,19 @@
 ---
 layout: post
-title: "Appwrite vs Vercel vs Netlify: where does your stack actually live?"
-description: Understanding what Vercel and Netlify actually provide, what Appwrite provides across its full platform, and how to think about the choice between consolidating your stack or mixing services.
+title: "Appwrite vs Vercel vs Netlify: where does your stack live?"
+description: What Vercel and Netlify actually provide versus Appwrite's full-stack platform, and how to decide between consolidating your stack or mixing services.
 date: 2024-06-14
 cover: /images/blog/appwrite-vs-vercel-vs-netlify/cover.png
 timeToRead: 7
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 If you ask a developer what Vercel and Netlify do, you'll get a clear answer: they host frontend applications. Fast deployments, CDN-delivered static assets, serverless functions for edge logic. They're excellent at what they do. But they're not full-stack platforms — and treating them as the foundation of your entire stack creates architectural gaps that show up later as bugs, security incidents, or features that are much harder to build than they should have been.
 
-This post is about understanding what each of these platforms actually provides and where Appwrite fits — as a platform that covers both frontend hosting and a complete backend in one place.
+The key question is not which hosting platform is better. It is what each layer of your stack is actually responsible for, and whether your current setup covers the complete surface area of your application's needs.
 
 ## What Vercel and Netlify are (and aren't)
 
@@ -126,17 +127,13 @@ Common manifestations:
 
 Each of these is solvable, but each requires adding another service, learning another API, and maintaining another integration. Appwrite was designed to cover all of these from the start — alongside the frontend hosting layer.
 
-## Moving forward
+## Choose your stack based on backend coverage, not just frontend delivery
 
 Vercel and Netlify are excellent at frontend delivery. They're not replacements for a backend. The teams that build most efficiently are those that understand what each layer of their stack is responsible for and pick tools that cover the complete surface area of their application's needs.
 
-[Appwrite](https://appwrite.io) covers the full stack — frontend hosting with [Appwrite Sites](https://appwrite.io/docs/products/sites) and a complete backend in a single platform. Or, if you prefer a separate hosting setup, Appwrite fills the backend layer cleanly alongside Vercel, Netlify, Cloudflare Pages, or anything else.
-
-Try [Appwrite Cloud](https://cloud.appwrite.io) for free or self-host using the [installation guide](https://appwrite.io/docs/advanced/self-hosting).
-
-## Resources
+[Appwrite](https://appwrite.io) covers the full stack: frontend hosting with [Appwrite Sites](https://appwrite.io/docs/products/sites) and a complete backend in a single platform. If you prefer a separate hosting setup, Appwrite fills the backend layer cleanly alongside Vercel, Netlify, Cloudflare Pages, or anything else. Try [Appwrite Cloud](https://cloud.appwrite.io) for free or self-host using the [installation guide](https://appwrite.io/docs/advanced/self-hosting).
 
 - [Appwrite Sites documentation](https://appwrite.io/docs/products/sites)
-- [Appwrite Documentation](https://appwrite.io/docs)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
+- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)

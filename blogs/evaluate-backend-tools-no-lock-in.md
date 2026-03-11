@@ -8,13 +8,14 @@ timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Every backend technology decision creates some amount of lock-in. The question is never "how do I avoid lock-in entirely" — it's "which dependencies are worth taking, and how do I minimize the cost of the ones I take?"
 
 Developers who've been through a painful migration know the feeling: a decision made early in a project, when the team was small and the requirements were unclear, becomes a constraint years later when the application has grown, the team has changed, and the requirements have evolved in ways nobody anticipated.
 
-This post is about how to evaluate backend tools with the migration cost in mind from the start.
+Evaluating backend tools with the migration cost in mind from the start is the best way to avoid that trap.
 
 ## What lock-in actually means in practice
 
@@ -109,15 +110,13 @@ Scoring Appwrite against the evaluation framework above:
 - **Feature isolation**: Appwrite's APIs follow standard conventions. Its authentication tokens are standard JWTs. Its database queries use a documented query syntax. The level of proprietary abstraction is low compared to platforms like Firebase.
 - **Pricing**: Appwrite Cloud prices on compute and storage. Self-hosted Appwrite has only infrastructure costs. Neither model involves per-operation billing that scales unpredictably with data access patterns.
 
-## Moving forward
+## Evaluate lock-in trade-offs before you're deep in a migration
 
 Evaluating backend tools with lock-in in mind doesn't mean being paralyzed or avoiding decisions. It means being clear-eyed about the dependencies you're taking on and choosing platforms where the lock-in trade-offs are reasonable given your situation.
 
 [Appwrite](https://appwrite.io) is designed to minimize these concerns: it's open source (Apache 2.0 licensed), fully self-hostable, uses standard REST APIs alongside native SDKs, stores data in portable formats, and offers a managed cloud service ([Appwrite Cloud](https://cloud.appwrite.io)) that can be migrated to self-hosted without code changes. It's a deliberate choice for teams that want a capable backend platform without accepting deep vendor lock-in.
 
-## Resources
-
-- [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Cloud](https://cloud.appwrite.io)

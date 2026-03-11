@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cloudinary vs Appwrite Storage: image transformations and ownership trade-offs"
+title: "Cloudinary vs Appwrite Storage: trade-offs in image handling"
 description: A technical comparison of Cloudinary and Appwrite Storage, covering image transformation capabilities, pricing models, and data ownership implications.
 date: 2024-06-07
 cover: /images/blog/cloudinary-vs-appwrite-storage/cover.png
@@ -8,6 +8,7 @@ timeToRead: 7
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Image and file handling is one of those backend concerns that starts simple — upload a photo, store it somewhere, serve it to users — and quickly becomes nuanced. Resize for mobile. Generate thumbnails. Serve optimized formats like WebP. Apply transformations on the fly. Restrict access to certain users. Handle uploads of 50MB videos.
@@ -89,14 +90,13 @@ Appwrite Storage is the file management component of the Appwrite platform. Unli
 - **Bucket-level configuration**: File type allowlists, maximum file size limits, and encryption settings are configured per bucket, not per upload.
 - **Self-hosting**: Appwrite Storage runs entirely within your own infrastructure when self-hosted, meaning files never leave your controlled environment — relevant for compliance and data ownership requirements.
 
-## Moving forward
+## Choose file storage based on access control needs, not just transformation depth
 
-Both tools are good at what they're designed for. The trade-offs aren't about quality — they're about fit. A social platform with complex image manipulation needs is a different use case than a SaaS application that stores user-uploaded PDFs and profile photos.
+Both tools are good at what they're designed for. The trade-offs are about fit, not quality. A social platform with complex image manipulation needs is a different use case than a SaaS application that stores user-uploaded PDFs and profile photos.
 
 [Appwrite Storage](https://appwrite.io/docs/products/storage) is available as part of [Appwrite Cloud](https://cloud.appwrite.io) or via self-hosting. It integrates naturally with Appwrite's authentication and database systems, making it straightforward to enforce per-user file access without building the access control logic yourself.
 
-## Resources
-
 - [Appwrite Storage documentation](https://appwrite.io/docs/products/storage)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
+- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Appwrite Cloud](https://cloud.appwrite.io)

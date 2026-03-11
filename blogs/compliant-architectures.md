@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Designing compliant architectures without slowing development"
-description: How to build compliance into your backend architecture from the start without creating bottlenecks or blocking your team from shipping.
+title: "Designing compliant architectures without slowing your team"
+description: How to build compliance into your backend architecture from the start without creating bottlenecks or blocking your team from shipping faster.
 date: 2024-03-22
 cover: /images/blog/compliant-architectures/cover.png
 timeToRead: 7
 author: aditya-oberai
 category: security
 featured: false
+unlisted: true
 ---
 
 Compliance has a reputation for slowing teams down. Ask any developer who has shipped a feature only to have it blocked by a security review, or watched a launch get delayed because a legal team needed time to assess data handling practices. The frustration is understandable — but in most cases, it's not compliance that's slow. It's retrofitting compliance onto a system that wasn't designed with it in mind.
@@ -72,15 +73,13 @@ Appwrite addresses several compliance-by-design concerns at the platform level, 
 - **Data residency**: Appwrite can be deployed within a specific cloud region or on-premise, putting data location entirely under your control.
 - **Self-hosting**: Because Appwrite is open source and self-hostable, your data can stay entirely within your own infrastructure — eliminating a class of third-party data handling concerns before they arise.
 
-## Moving forward
+## Embed compliance in your architecture before the first audit
 
-Compliance doesn't have to be a speed bump. When it's embedded in your architecture rather than imposed on top of it, it becomes a competitive advantage — a signal to enterprise customers that your team builds trustworthy systems.
+Compliance doesn't have to be a speed bump. When it's embedded in your architecture rather than imposed on top of it, it becomes a competitive advantage: a signal to enterprise customers that your team builds trustworthy systems.
 
-[Appwrite](https://appwrite.io) is an open-source backend-as-a-service that provides built-in authentication, databases, file storage, and serverless functions with security controls built in from the ground up. Its permission system, session management, password policies, and support for self-hosting make it a practical choice for teams building in regulated environments. Whether you're running Appwrite on your own infrastructure or using Appwrite Cloud, the platform gives you the controls you need to build compliantly without building everything yourself.
+[Appwrite](https://appwrite.io) is an open-source backend-as-a-service that provides built-in authentication, databases, file storage, and serverless functions with security controls built in from the ground up. Its permission system, session management, password policies, and support for self-hosting make it a practical choice for teams building in regulated environments. Whether you're running Appwrite on your own infrastructure or using [Appwrite Cloud](https://cloud.appwrite.io), the platform gives you the controls you need to build compliantly without building everything yourself.
 
-## Resources
-
-- [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
+- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Appwrite Security overview](https://appwrite.io/docs/advanced/security)

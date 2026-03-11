@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Why 'Build It From Scratch' Is Killing Developer Productivity"
-description: The hidden costs of building custom solutions for problems that have already been solved, and how to develop better judgment about when to build versus when to use existing tools.
+title: "Why Building From Scratch Is Killing Developer Productivity"
+description: The hidden costs of building custom solutions for solved problems and how to develop better judgment about when to build versus when to use existing tools.
 date: 2024-09-20
 cover: /images/blog/build-from-scratch-productivity/cover.png
 timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Every developer has an internal instinct to build things. It's part of what makes software development satisfying — the ability to create something from nothing, tailored exactly to your requirements. But this instinct, when left unchecked, is one of the most reliable ways to slow a team down.
@@ -76,15 +77,13 @@ Appwrite directly replaces the categories of infrastructure that teams most comm
 
 The code your team writes is the unique business logic that makes your application worth using. Appwrite handles the infrastructure layer that every application needs but none should be building from scratch.
 
-## Moving forward
+## Stop rebuilding infrastructure and start shipping product
 
-The discipline of knowing what not to build is as important as the ability to build. The developers and teams who ship the most are not the ones who build the most infrastructure — they're the ones who build exactly the infrastructure they need to build, and use everything else from tools that already exist.
+The discipline of knowing what not to build is as important as the ability to build. The developers and teams who ship the most are not the ones who build the most infrastructure. They build exactly the infrastructure they need to build, and use everything else from tools that already exist.
 
-[Appwrite](https://appwrite.io) is built around this philosophy: a single platform that handles authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — the infrastructure problems that almost every application needs to solve, so that development time goes toward what makes your application unique. Try [Appwrite Cloud](https://cloud.appwrite.io) for free or review the [documentation](https://appwrite.io/docs) to see how much backend infrastructure you can stop building from scratch.
-
-## Resources
+[Appwrite](https://appwrite.io) is built around this philosophy: a single platform that handles authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging. Development time goes toward what makes your application unique. Try [Appwrite Cloud](https://cloud.appwrite.io) for free or review the [documentation](https://appwrite.io/docs) to see how much backend infrastructure you can stop building from scratch.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Cloud](https://cloud.appwrite.io)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Functions docs](https://appwrite.io/docs/products/functions)

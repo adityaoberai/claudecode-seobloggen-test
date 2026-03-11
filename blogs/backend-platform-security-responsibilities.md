@@ -8,6 +8,7 @@ timeToRead: 6
 author: aditya-oberai
 category: security
 featured: false
+unlisted: true
 ---
 
 When you build on a backend platform — whether that's a cloud provider, a BaaS solution, or a managed database service — you're entering into what the industry calls a "shared responsibility model." The platform secures some things. You secure others. Understanding exactly where that boundary sits is one of the most important security decisions a development team makes.
@@ -79,9 +80,11 @@ Within the shared responsibility model, Appwrite clearly defines what the platfo
 
 Your responsibilities remain: your application logic, your access control configuration, your API key management, and your input validation. But Appwrite handles the platform-layer security correctly so you can focus on what's uniquely yours.
 
-## Resources
+## Apply your application security on top of a platform you can verify
 
-- [Appwrite Documentation](https://appwrite.io/docs)
+No backend platform removes your responsibility for application security. But choosing a platform that handles its layer correctly, is transparent about what it does, and gives you the primitives to enforce least-privilege access makes your job significantly smaller. With Appwrite, you can verify every security-relevant decision in the open-source codebase rather than trusting vendor claims.
+
 - [Appwrite Security overview](https://appwrite.io/docs/advanced/security)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
+- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)

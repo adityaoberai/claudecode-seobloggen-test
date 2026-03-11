@@ -8,6 +8,7 @@ timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Developer time is the most constrained resource in most software projects. When teams are small, every engineering hour spent on infrastructure is an hour not spent on the product features that differentiate the application and drive growth. The decision of where to spend those hours is one of the highest-leverage choices a development team makes.
@@ -111,15 +112,13 @@ The time savings described in this post are concrete when using Appwrite:
 
 The **1-2 day setup estimate** for a production-ready backend is achievable with Appwrite precisely because these components are designed to be configured and used immediately — not assembled from parts.
 
-## Moving forward
+## Replace weeks of backend infrastructure work with hours of configuration
 
-The decision to use a managed backend platform is, at its core, a decision about where to spend development time. The evidence is clear: teams that use managed backends for solved infrastructure problems ship faster, launch earlier, and can put more engineering capacity into the product work that actually matters.
+The decision to use a managed backend platform is a decision about where to spend development time. Teams that use managed backends for solved infrastructure problems ship faster, launch earlier, and put more engineering capacity into the product work that actually matters.
 
-[Appwrite](https://appwrite.io) covers the full backend layer — authentication, databases, file storage, serverless functions, real-time, and messaging — in a single platform that can be set up in hours and extended as your application grows. [Appwrite Cloud](https://cloud.appwrite.io) provides a fully managed hosting experience; self-hosting is available when control or compliance requirements demand it. Start with the [quickstart guides](https://appwrite.io/docs) to see how quickly backend infrastructure can be behind you.
-
-## Resources
+[Appwrite](https://appwrite.io) covers the full backend layer: authentication, databases, file storage, serverless functions, real-time, and messaging. It can be set up in hours and extended as your application grows. [Appwrite Cloud](https://cloud.appwrite.io) provides a fully managed hosting experience; self-hosting is available when control or compliance requirements demand it.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Cloud](https://cloud.appwrite.io)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Functions docs](https://appwrite.io/docs/products/functions)

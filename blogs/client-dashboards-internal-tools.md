@@ -8,6 +8,7 @@ timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Every developer who has worked with clients has shipped at least one admin panel, operations dashboard, or internal management tool. These projects share a common characteristic: they're rarely glamorous, but they're almost always urgent. A client needs to manage their user base. An ops team needs to review uploaded documents. A support team needs to search orders.
@@ -90,15 +91,13 @@ For client dashboard and internal tool work, Appwrite covers the entire backend 
 - **File storage with permissions**: Managed file storage where access is controlled per user or team, making document review and approval workflows straightforward to implement.
 - **Serverless functions**: Backend actions triggered from the dashboard — sending notifications, updating records in bulk, integrating with third-party services — can be implemented as Appwrite Functions without maintaining a separate server.
 
-## Moving forward
+## Reduce per-client backend work with a shared platform foundation
 
-Internal tools don't have to be slow to build. The key is separating the logic that needs to be custom from the infrastructure that can be handled by a platform. Authentication, data storage, file handling, and access control are solved problems — you shouldn't be rebuilding them for every client engagement.
+Internal tools don't have to be slow to build. The key is separating the logic that needs to be custom from the infrastructure that can be handled by a platform. Authentication, data storage, file handling, and access control are solved problems. You should not be rebuilding them for every client engagement.
 
-[Appwrite](https://appwrite.io) gives you all of these as a unified platform. Its console handles a large portion of the administrative interface needs directly. When you need a custom front end, the Appwrite SDKs for JavaScript, Flutter, iOS, Android, and multiple server-side languages let you build on top of a solid foundation without starting from zero. Visit the [Appwrite documentation](https://appwrite.io/docs) to explore what's available.
+[Appwrite](https://appwrite.io) gives you all of these as a unified platform. Its console handles a large portion of the administrative interface needs directly. When you need a custom front end, the Appwrite SDKs for JavaScript, Flutter, iOS, Android, and multiple server-side languages let you build on top of a solid foundation without starting from zero.
 
-## Resources
-
-- [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Console documentation](https://appwrite.io/docs/tooling/console)
+- [Appwrite Cloud](https://cloud.appwrite.io)

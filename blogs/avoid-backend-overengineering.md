@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "How to Avoid Backend Overengineering in Early-Stage Products"
-description: The patterns that lead early-stage teams to overengineer their backend, and the practical decisions that keep systems appropriately simple while still being production-ready.
+description: The patterns that lead early-stage teams to overengineer their backend and the decisions that keep systems simple while still being production-ready.
 date: 2024-08-09
 cover: /images/blog/avoid-backend-overengineering/cover.png
 timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Early-stage product development has a seductive enemy: the urge to build infrastructure for a scale that doesn't exist yet. A developer building their first application feature starts thinking about microservices, event-driven architecture, distributed caching, and multi-region failover — for a product with zero users.
@@ -88,15 +89,13 @@ Appwrite is built around the same "appropriately simple" philosophy described ab
 
 The result is a backend that covers what you need at launch and grows with your product — without requiring you to design a distributed system before you have users.
 
-## Moving forward
+## Keep your early-stage backend boring on purpose
 
-The best thing a small team can do for their backend is make it boring as quickly as possible. Use managed services for solved problems — authentication, database, storage, functions. Keep the architecture as simple as the actual requirements allow. Add complexity only when real constraints demand it.
+The best thing a small team can do for their backend is make it boring as quickly as possible. Use managed services for solved problems: authentication, database, storage, functions. Keep the architecture as simple as the actual requirements allow. Add complexity only when real constraints demand it.
 
 [Appwrite](https://appwrite.io) is built around this philosophy. Instead of asking development teams to assemble and maintain multiple backend services, it provides authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging in a single, unified platform. Your team writes the code that matters for your product and delegates the solved infrastructure problems to a platform that handles them correctly. Start on [Appwrite Cloud](https://cloud.appwrite.io) to get set up in minutes, or explore the [documentation](https://appwrite.io/docs) to see the full capabilities.
 
-## Resources
-
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Cloud](https://cloud.appwrite.io)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Functions docs](https://appwrite.io/docs/products/functions)
+- [Appwrite Databases docs](https://appwrite.io/docs/products/databases)

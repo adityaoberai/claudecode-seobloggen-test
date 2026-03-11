@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "Open-source alternatives to proprietary BaaS tools"
-description: A look at the open-source backend-as-a-service landscape, what to consider when choosing between platforms, and why the open-source model matters for backend infrastructure.
+description: A look at the open-source BaaS landscape, what to evaluate when choosing a platform, and why open-source matters for backend ownership and cost control.
 date: 2024-06-21
 cover: /images/blog/open-source-baas-alternatives/cover.png
 timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
 Backend-as-a-service has matured into a crowded market. Firebase brought the category to mainstream developer awareness, and since then dozens of platforms have emerged — some proprietary, some open source, some somewhere in between. For teams evaluating their backend options, the open-source tier deserves serious consideration, not just as a cost-saving measure but as a fundamentally different way of thinking about backend ownership.
@@ -67,15 +68,13 @@ Directus is an open-source data platform and headless CMS. It wraps any SQL data
 - **Migration path.** If you start with the managed cloud offering and want to self-host later (or vice versa), how straightforward is the migration?
 - **License.** What does the license permit? Some open-source projects use licenses that restrict commercial use or require open-sourcing your own code.
 
-## Moving forward
+## Pick an open-source BaaS that won't trade one lock-in for another
 
-Open-source BaaS platforms have closed most of the capability gap that once made proprietary platforms the default choice. For most applications — from MVPs to production-scale products — an open-source backend platform provides everything needed while giving teams significantly more control over their data, their costs, and their future migration options.
+Open-source BaaS platforms have closed most of the capability gap that once made proprietary platforms the default choice. For most applications, from MVPs to production-scale products, an open-source backend platform provides everything needed while giving teams significantly more control over their data, their costs, and their future migration options.
 
-[Appwrite](https://appwrite.io) stands out in this space for its comprehensive feature set, active development community, clean self-hosting experience, and Apache 2.0 license that imposes no restrictions on commercial use. Whether you choose [Appwrite Cloud](https://cloud.appwrite.io) for a managed start or self-host from day one, you're working with a platform where you're never locked into a single vendor's infrastructure. Explore the [Appwrite documentation](https://appwrite.io/docs) to see the full capabilities available.
-
-## Resources
+[Appwrite](https://appwrite.io) stands out in this space for its comprehensive feature set, active development community, clean self-hosting experience, and Apache 2.0 license that imposes no restrictions on commercial use. Whether you choose [Appwrite Cloud](https://cloud.appwrite.io) for a managed start or self-host from day one, you're working with a platform where you're never locked into a single vendor's infrastructure.
 
 - [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
+- [Appwrite Cloud](https://cloud.appwrite.io)

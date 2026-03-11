@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When an open-source backend makes more sense than managed SaaS"
+title: "When open-source backend beats managed SaaS"
 description: The real trade-offs between self-hosted open-source backends and managed SaaS platforms, and how to decide which approach fits your team's situation.
 date: 2024-07-05
 cover: /images/blog/open-source-backend-vs-managed-saas/cover.png
@@ -8,11 +8,10 @@ timeToRead: 6
 author: aditya-oberai
 category: product
 featured: false
+unlisted: true
 ---
 
-The default choice for most developers reaching for a backend platform has shifted toward managed SaaS: sign up, get credentials, start building. The convenience is real and significant. But the convenience of managed SaaS comes with trade-offs that aren't always visible at the start of a project — and for certain teams and use cases, open-source self-hosted backends are the better choice by a significant margin.
-
-This post is about when that switch in reasoning makes sense.
+The default choice for most developers reaching for a backend platform has shifted toward managed SaaS: sign up, get credentials, start building. The convenience is real and significant. But the convenience of managed SaaS comes with trade-offs that aren't always visible at the start of a project, and for certain teams and use cases, open-source self-hosted backends are the better choice by a significant margin.
 
 ## What managed SaaS backends give you
 
@@ -82,16 +81,13 @@ Appwrite is purpose-built for the path described in this post — starting manag
 - **Open source, Apache 2.0**: Appwrite's code is publicly available and permissively licensed. Your investment in learning the platform and building on its APIs is not at risk from vendor pricing changes or product discontinuation.
 - **Data portability**: Appwrite stores data in standard formats. If you ever need to move, the migration path is your own infrastructure or another data store — not a vendor export format.
 
-## Moving forward
+## Start managed, migrate to self-hosted when the economics shift
 
-The decision between managed SaaS and open-source self-hosted is not a permanent one. Many teams start with managed SaaS for speed and simplicity, then move to self-hosting when their data requirements, scale, or compliance needs evolve. Choosing an open-source backend that also offers a managed cloud version makes this transition smoother — you can start managed and migrate to self-hosted later using the same codebase and APIs.
+The decision between managed SaaS and open-source self-hosted is not a permanent one. Many teams start with managed SaaS for speed and simplicity, then move to self-hosting when their data requirements, scale, or compliance needs evolve. Choosing an open-source backend that also offers a managed cloud version makes this transition smoother: you can start managed and migrate to self-hosted later using the same codebase and APIs.
 
-[Appwrite](https://appwrite.io) is built for exactly this path. [Appwrite Cloud](https://cloud.appwrite.io) provides a fully managed experience for teams that want to start without infrastructure concerns. The same platform is fully self-hostable when your requirements change. The APIs, SDKs, and data models are identical — migrating between deployment modes doesn't require rewriting your application. Visit the [self-hosting documentation](https://appwrite.io/docs/advanced/self-hosting) to see how Appwrite self-hosting works.
+[Appwrite](https://appwrite.io) is built for exactly this path. [Appwrite Cloud](https://cloud.appwrite.io) provides a fully managed experience for teams that want to start without infrastructure concerns. The same platform is fully self-hostable when your requirements change. The APIs, SDKs, and data models are identical, so migrating between deployment modes doesn't require rewriting your application.
 
-## Resources
-
-- [Appwrite Documentation](https://appwrite.io/docs)
 - [Appwrite Self-Hosting docs](https://appwrite.io/docs/advanced/self-hosting)
 - [Appwrite Cloud](https://cloud.appwrite.io)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
+- [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)

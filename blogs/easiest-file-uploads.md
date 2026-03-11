@@ -8,6 +8,7 @@ timeToRead: 6
 author: aditya-oberai
 category: tutorial
 featured: false
+unlisted: true
 ---
 
 Adding file uploads to an application is one of those features that looks simple until you're actually doing it. Choose a storage provider, configure permissions, generate upload URLs, handle chunking for large files, serve files with proper content types, restrict access to authorized users, and avoid storing sensitive files publicly. Each of these is a real problem that needs a real solution.
@@ -154,15 +155,13 @@ await storage.deleteFile('profile-photos', fileId);
 
 For applications that need to clean up orphaned files (files whose associated database records have been deleted), Appwrite Functions can be used to trigger file deletions on database document delete events.
 
-## Moving forward
+## Implement production-ready file uploads in hours, not days
 
-File uploads don't have to be a week of backend work. Appwrite Storage handles the infrastructure — chunked uploads, access control, image transformations, file validation — so you write the feature, not the plumbing.
+File uploads don't have to be a week of backend work. Appwrite Storage handles the infrastructure: chunked uploads, access control, image transformations, file validation. You write the feature, not the plumbing.
 
 To go further with [Appwrite Storage](https://appwrite.io/docs/products/storage), explore the documentation for advanced topics like bucket encryption settings, antivirus scanning configuration, and integrating uploads with Appwrite Functions for post-upload processing.
 
-## Resources
-
 - [Appwrite Storage documentation](https://appwrite.io/docs/products/storage)
-- [Appwrite Web SDK](https://appwrite.io/docs/sdks)
-- [Appwrite Discord](https://appwrite.io/discord)
-- [Appwrite GitHub](https://github.com/appwrite/appwrite)
+- [Appwrite Web SDK docs](https://appwrite.io/docs/sdks)
+- [Appwrite Functions docs](https://appwrite.io/docs/products/functions)
+- [Appwrite Cloud](https://cloud.appwrite.io)
