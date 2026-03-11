@@ -31,27 +31,27 @@ It's worth being clear about Firebase's genuine strengths before cataloguing its
 
 Firebase's APIs, data models, and SDKs are proprietary. Firestore's document model, security rules syntax, real-time listener API, and authentication tokens are all Firebase-specific. There is no standard interface that other databases or auth systems use.
 
-When you build deeply on Firebase, you're not building on transferable infrastructure — you're building on Firebase. Migrating away means rewriting your data access layer, your security rules, your authentication flow, and potentially your data model. For applications that have been in production for years, this migration can be a multi-month engineering project.
+When you build deeply on Firebase, you're not building on transferable infrastructure; you're building on Firebase. Migrating away means rewriting your data access layer, your security rules, your authentication flow, and potentially your data model. For applications that have been in production for years, this migration can be a multi-month engineering project.
 
-This isn't unique to Firebase — most managed platforms involve some lock-in — but the depth of Firebase's proprietary abstractions makes it more pronounced than some alternatives.
+This isn't unique to Firebase (most managed platforms involve some lock-in), but the depth of Firebase's proprietary abstractions makes it more pronounced than some alternatives.
 
 ### Pricing at scale
 
 Firebase's pricing model charges per document read, write, and delete, plus for storage and bandwidth. The Spark (free) plan is limited; the Blaze (pay-as-you-go) plan charges incrementally.
 
-The problem developers encounter is that Firebase's pricing is difficult to predict when data access patterns are complex. A real-time listener on a collection that receives frequent updates can generate many more document reads than expected. Denormalized data models — which Firebase's NoSQL approach sometimes encourages — can multiply read counts.
+The problem developers encounter is that Firebase's pricing is difficult to predict when data access patterns are complex. A real-time listener on a collection that receives frequent updates can generate many more document reads than expected. Denormalized data models (which Firebase's NoSQL approach sometimes encourages) can multiply read counts.
 
 Teams that move quickly and don't model their usage have received Firebase bills that were multiples of what they anticipated. This is not unique to Firebase (all cloud services have this problem), but Firebase's pricing model is particularly sensitive to data access pattern choices made during development.
 
 ### Data ownership and Google's history of product discontinuation
 
-Firebase data lives in Google's infrastructure. Google has a documented history of discontinuing products — Google Reader, Google+, Inbox, Google Stadia, and many others. While Firebase is clearly a core part of Google's developer platform and an unlikely discontinuation target, the risk is not zero, and teams that have built critical infrastructure on discontinued Google products have paid the migration cost.
+Firebase data lives in Google's infrastructure. Google has a documented history of discontinuing products: Google Reader, Google+, Inbox, Google Stadia, and many others. While Firebase is clearly a core part of Google's developer platform and an unlikely discontinuation target, the risk is not zero, and teams that have built critical infrastructure on discontinued Google products have paid the migration cost.
 
 More practically: your Firebase data is not portable in the way that a Postgres database export is portable. Exporting Firestore data requires writing export scripts, and the exported format is Google's proprietary format.
 
 ### Limited to Firebase's feature set
 
-Firebase provides authentication, Firestore, the Realtime Database, Cloud Storage, Cloud Functions, Hosting, and a few other services. When you need something outside that set — a specific messaging system, a custom authentication provider, a specialized storage feature — you're either adding another Google Cloud service (increasing complexity) or adding a third-party service (adding another vendor).
+Firebase provides authentication, Firestore, the Realtime Database, Cloud Storage, Cloud Functions, Hosting, and a few other services. When you need something outside that set (a specific messaging system, a custom authentication provider, a specialized storage feature), you're either adding another Google Cloud service (increasing complexity) or adding a third-party service (adding another vendor).
 
 ### Self-hosting is not possible
 
@@ -69,14 +69,14 @@ Open-source backend platforms like Appwrite address these trade-offs differently
 
 ## Appwrite as a Firebase alternative
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 Appwrite directly addresses each of the Firebase trade-offs outlined above:
 
 - **Lock-in**: Appwrite uses standard REST APIs and open-source SDKs. Its Apache 2.0 license and self-hosting support mean you're never dependent on a single vendor's pricing or product decisions.
 - **Pricing**: Appwrite Cloud pricing is based on compute and storage, not per-document operations. Self-hosted Appwrite has only infrastructure costs. Neither model produces per-query billing surprises.
 - **Data ownership**: Self-hosted Appwrite stores data in your own infrastructure. Even on Appwrite Cloud, the data model is standard and exportable. There is no Google-owned infrastructure between you and your data.
-- **Feature breadth**: Appwrite provides authentication (email, OAuth2 with 30+ providers, phone, anonymous, MFA), a document database with real-time subscriptions, file storage with permissions and antivirus scanning, serverless functions, and messaging — covering the same surface area as Firebase's main services.
+- **Feature breadth**: Appwrite provides authentication (email, OAuth2 with 30+ providers, phone, anonymous, MFA), a document database with real-time subscriptions, file storage with permissions and antivirus scanning, serverless functions, and messaging, covering the same surface area as Firebase's main services.
 - **Self-hosting**: Appwrite can be deployed on any Docker-compatible infrastructure, including your own servers, your cloud account, or an on-premise environment. This is a hard requirement for many enterprise and compliance use cases that Firebase simply cannot satisfy.
 
 ## Who should still consider Firebase

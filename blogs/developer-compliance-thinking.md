@@ -25,13 +25,13 @@ By the time a developer understands what a compliance requirement actually means
 
 ### GDPR (General Data Protection Regulation)
 
-Applicable if you're processing personal data of EU residents — regardless of where your company is based. The core developer-relevant requirements are:
+Applicable if you're processing personal data of EU residents, regardless of where your company is based. The core developer-relevant requirements are:
 
-- **Lawful basis for processing** — you need a documented legal reason to process each category of data you collect
-- **Data minimization** — collect only what you actually need
-- **Right to erasure** — users can request deletion of their data, and your system must be able to fulfill that request across all stores
-- **Data portability** — users can request their data in a machine-readable format
-- **Breach notification** — data breaches must be reported to the relevant supervisory authority within 72 hours
+- **Lawful basis for processing**: you need a documented legal reason to process each category of data you collect
+- **Data minimization**: collect only what you actually need
+- **Right to erasure**: users can request deletion of their data, and your system must be able to fulfill that request across all stores
+- **Data portability**: users can request their data in a machine-readable format
+- **Breach notification**: data breaches must be reported to the relevant supervisory authority within 72 hours
 
 In practice, GDPR compliance touches your user registration flow, your data model, your third-party integrations, your logging and analytics setup, and your support processes.
 
@@ -39,10 +39,10 @@ In practice, GDPR compliance touches your user registration flow, your data mode
 
 Applicable if you're processing Protected Health Information (PHI) in the United States. The core technical requirements, known as the Security Rule, cover:
 
-- **Access controls** — unique user identification, emergency access procedures, automatic logoff, and encryption
-- **Audit controls** — hardware, software, and procedural mechanisms to examine access and activity
-- **Integrity controls** — mechanisms to ensure PHI is not improperly altered or destroyed
-- **Transmission security** — encryption and integrity controls for PHI transmitted over networks
+- **Access controls**: unique user identification, emergency access procedures, automatic logoff, and encryption
+- **Audit controls**: hardware, software, and procedural mechanisms to examine access and activity
+- **Integrity controls**: mechanisms to ensure PHI is not improperly altered or destroyed
+- **Transmission security**: encryption and integrity controls for PHI transmitted over networks
 
 HIPAA compliance requires a comprehensive risk analysis of your system, documented policies and procedures, and Business Associate Agreements with every vendor that touches PHI.
 
@@ -54,7 +54,7 @@ If you do store cardholder data, PCI DSS requires network segmentation, encrypti
 
 ### SOC 2 (Service Organization Control 2)
 
-Not a legal requirement but increasingly a commercial one. Enterprise buyers — especially in the US — often require vendors to have SOC 2 Type II certification before signing contracts. SOC 2 covers five Trust Services Criteria: security, availability, processing integrity, confidentiality, and privacy.
+Not a legal requirement but increasingly a commercial one. Enterprise buyers (especially in the US) often require vendors to have SOC 2 Type II certification before signing contracts. SOC 2 covers five Trust Services Criteria: security, availability, processing integrity, confidentiality, and privacy.
 
 Getting SOC 2 certified requires documented controls across your engineering, security, and operations practices. It's a significant process but increasingly table stakes for selling to enterprise customers.
 
@@ -81,11 +81,11 @@ Having answers to these questions makes the legal review faster and more product
 
 ## Appwrite for compliance-ready applications
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 For developers thinking through compliance requirements before engaging legal, Appwrite provides a concrete foundation that maps directly to common framework requirements:
 
-- **GDPR**: Appwrite supports user data deletion at the account level, granular data access permissions per resource, and self-hosting for full data residency control — directly addressing GDPR's right to erasure and data minimization requirements.
+- **GDPR**: Appwrite supports user data deletion at the account level, granular data access permissions per resource, and self-hosting for full data residency control, directly addressing GDPR's right to erasure and data minimization requirements.
 - **HIPAA**: Appwrite's self-hosting option allows deployment within your own compliant infrastructure, keeping PHI within your controlled environment. Its authentication system, session management, and audit logging map to HIPAA's Security Rule technical safeguards.
 - **SOC 2**: Appwrite's permission system, audit logging, and encryption at rest and in transit provide a documented, implementable foundation for SOC 2's security and availability criteria.
 - **Answering the hard questions**: When an auditor asks "who has access to this data and how is it controlled?", Appwrite's explicit permission model gives you a concrete, reviewable answer rather than custom code that needs to be explained from scratch.
@@ -94,9 +94,9 @@ For developers thinking through compliance requirements before engaging legal, A
 
 Compliance doesn't have to be a surprise. Developers who understand the frameworks that apply to their application make better technical decisions and have more productive conversations with legal teams, security reviewers, and enterprise customers.
 
-[Appwrite](https://appwrite.io) is an open-source backend platform built with security and privacy controls as first-class features. Its support for self-hosting, built-in GDPR-relevant features like data deletion, granular permissions, and comprehensive audit logging make it a practical foundation for applications with real compliance requirements. Explore the [Appwrite documentation](https://appwrite.io/docs) to see how its features map to the security controls your compliance framework requires.
+[Appwrite](https://appwrite.io) is an open-source backend platform built with security and privacy controls as first-class features. Its support for self-hosting, built-in GDPR-relevant features like data deletion, granular permissions, and comprehensive audit logging make it a practical foundation for applications with real compliance requirements. Explore the [Appwrite compliance documentation](https://appwrite.io/docs/advanced/security#compliance) to see how its features map to the security controls your compliance framework requires.
 
-- [Appwrite Security overview](https://appwrite.io/docs/advanced/security)
+- [Appwrite GDPR compliance](https://appwrite.io/docs/advanced/security/gdpr)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [GDPR official text](https://gdpr-info.eu/)
 - [HHS HIPAA Security Rule](https://www.hhs.gov/hipaa/for-professionals/security/index.html)

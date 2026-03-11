@@ -13,27 +13,27 @@ unlisted: true
 
 Something has shifted in the past few years in independent software development. Solo developers and two-person teams are shipping products that used to require a 10-person engineering team. They're launching in weeks instead of months, getting to first paying customer faster than ever, and doing it without burning out on infrastructure work.
 
-This isn't magic — it's the compounding effect of a set of practical decisions about what to build, what to buy, and what to skip entirely.
+This isn't magic; it's the compounding effect of a set of practical decisions about what to build, what to buy, and what to skip entirely.
 
 ## The leverage shift
 
-The historical bottleneck for indie developers wasn't ideas — it was implementation time. Building a web application from scratch meant setting up a server, configuring a database, implementing authentication, building an API, and writing all of that before touching the actual thing that made the product interesting.
+The historical bottleneck for indie developers wasn't ideas; it was implementation time. Building a web application from scratch meant setting up a server, configuring a database, implementing authentication, building an API, and writing all of that before touching the actual thing that made the product interesting.
 
-Modern tooling has changed this. The infrastructure layer — auth, storage, database, APIs — is now largely solved by managed platforms. The frontend layer is solved by component libraries, design systems, and framework conventions. What remains for the developer to build is the unique logic that differentiates their product. Everything else can be assembled from available tools.
+Modern tooling has changed this. The infrastructure layer (auth, storage, database, APIs) is now largely solved by managed platforms. The frontend layer is solved by component libraries, design systems, and framework conventions. What remains for the developer to build is the unique logic that differentiates their product. Everything else can be assembled from available tools.
 
-The developers shipping fastest have internalized this. They're not proud of writing their own authentication system — they're proud of how quickly they shipped something people use.
+The developers shipping fastest have internalized this. They're not proud of writing their own authentication system; they're proud of how quickly they shipped something people use.
 
 ## The tools that show up in every fast indie stack
 
 ### Frontend frameworks that handle the boring parts
 
-React, Next.js, SvelteKit, Nuxt — modern meta-frameworks handle routing, server-side rendering, API routes, and deployment with minimal configuration. Combined with component libraries like shadcn/ui, Radix, or Tailwind UI, a developer can build a polished, responsive interface in a fraction of the time it would have taken five years ago.
+React, Next.js, SvelteKit, Nuxt: modern meta-frameworks handle routing, server-side rendering, API routes, and deployment with minimal configuration. Combined with component libraries like shadcn/ui, Radix, or Tailwind UI, a developer can build a polished, responsive interface in a fraction of the time it would have taken five years ago.
 
 ### Backend platforms instead of custom APIs
 
 Building a custom backend API is the single biggest time sink in a new application build. Indie developers who ship fast make a different choice: they use a backend platform that provides authentication, database, file storage, and serverless functions out of the box.
 
-This single decision — using a backend platform instead of building a custom API — saves days of work on almost every project.
+This single decision (using a backend platform instead of building a custom API) saves days of work on almost every project.
 
 ### AI-assisted development
 
@@ -47,29 +47,29 @@ Vercel, Railway, Fly.io, and similar platforms have made deployment a solved pro
 
 **Scope aggressively.** The indie developers who ship fastest have a ruthless relationship with scope. Every feature that doesn't directly validate the core value proposition gets cut from v1. The goal is to learn whether anyone wants the product, not to build the complete vision first.
 
-**Decide once about architecture.** Endless evaluation of technology options is time not spent building. The developers who ship fast make architectural decisions quickly — often using whatever they know best — and then stop second-guessing them until there's a reason to revisit.
+**Decide once about architecture.** Endless evaluation of technology options is time not spent building. The developers who ship fast make architectural decisions quickly (often using whatever they know best) and then stop second-guessing them until there's a reason to revisit.
 
 **Launch before it feels ready.** Shipping before the product feels complete is uncomfortable but valuable. Users find the important bugs. Real usage reveals the important missing features. Private polish never builds the feedback loop that makes products better.
 
-**Reuse patterns ruthlessly.** Every time you solve a problem — file upload handling, email notification logic, subscription billing — document the pattern and reuse it. Indie developers who have shipped multiple products have a personal library of solutions that reduces the marginal cost of each new project.
+**Reuse patterns ruthlessly.** Every time you solve a problem (file upload handling, email notification logic, subscription billing), document the pattern and reuse it. Indie developers who have shipped multiple products have a personal library of solutions that reduces the marginal cost of each new project.
 
 ## Appwrite for indie developers
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 For indie developers and small teams, Appwrite's value proposition is direct: one platform replaces the collection of individual backend services that would otherwise each need their own account, API key, billing setup, and learning curve.
 
-- **Authentication with 30+ OAuth providers**: Google, GitHub, Apple, Discord, and many more — configured in minutes, with no custom OAuth implementation required.
+- **Authentication with 30+ OAuth providers**: Google, GitHub, Apple, Discord, and many more, configured in minutes, with no custom OAuth implementation required.
 - **Document database**: Create collections, define your schema, and start querying immediately. Real-time subscriptions let your UI react to data changes without polling.
 - **File storage**: Upload, serve, and transform images. Restrict access to specific users. No S3 configuration required.
-- **Serverless functions**: Server-side logic in Node.js, Python, Go, and more — triggered by HTTP, events, or schedules — without managing a separate server.
+- **Serverless functions**: Server-side logic in Node.js, Python, Go, and more, triggered by HTTP, events, or schedules, without managing a separate server.
 - **Free tier on Appwrite Cloud**: Sufficient for most indie projects at launch, with predictable costs as scale grows.
 
-The result: the infrastructure layer is behind you in hours, not days — leaving the time for what actually makes your product worth using.
+The result: the infrastructure layer is behind you in hours, not days, leaving the time for what actually makes your product worth using.
 
 ## What the fastest builders have in common
 
-Across the indie hacker community — on Twitter, on Indie Hackers, in product-focused Discords — the developers who ship most consistently share a few traits:
+Across the indie hacker community (on Twitter, on Indie Hackers, in product-focused Discords), the developers who ship most consistently share a few traits:
 
 - They're not trying to build perfect infrastructure; they're trying to test ideas
 - They've made peace with using managed services instead of building everything

@@ -17,9 +17,9 @@ This post walks through the fastest path from "we need file uploads" to "file up
 
 ## What is Appwrite?
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
-Appwrite Storage is the file management component of the Appwrite platform. It handles the infrastructure concerns of file uploads — chunking large files automatically, enforcing file type and size validation, managing per-user access controls, performing on-the-fly image transformations, and integrating antivirus scanning — so that adding file uploads to your application is a configuration and SDK task rather than a backend engineering project.
+Appwrite Storage is the file management component of the Appwrite platform. It handles the infrastructure concerns of file uploads (chunking large files automatically, enforcing file type and size validation, managing per-user access controls, performing on-the-fly image transformations, and integrating antivirus scanning) so that adding file uploads to your application is a configuration and SDK task rather than a backend engineering project.
 
 ## What you'll need
 
@@ -36,7 +36,7 @@ To create a bucket:
 2. Click **Create bucket**
 3. Give it a name (e.g., "profile-photos")
 4. Set the maximum file size and allowed file extensions appropriate for your use case
-5. Configure the permissions — for user-specific files, you'll typically want users to be able to create files and read their own files
+5. Configure the permissions. For user-specific files, you'll typically want users to be able to create files and read their own files
 
 You can also create buckets programmatically using the Appwrite Server SDK:
 
@@ -82,7 +82,7 @@ const storage = new Storage(client);
 async function uploadFile(file) {
     const response = await storage.createFile(
         'profile-photos',    // Bucket ID
-        ID.unique(),         // File ID — let Appwrite generate one
+        ID.unique(),         // File ID. Let Appwrite generate one
         file                 // The File object from an <input type="file">
     );
     return response.$id;     // Store this ID to retrieve the file later

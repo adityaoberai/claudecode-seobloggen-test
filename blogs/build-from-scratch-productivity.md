@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-Every developer has an internal instinct to build things. It's part of what makes software development satisfying — the ability to create something from nothing, tailored exactly to your requirements. But this instinct, when left unchecked, is one of the most reliable ways to slow a team down.
+Every developer has an internal instinct to build things. It's part of what makes software development satisfying: the ability to create something from nothing, tailored exactly to your requirements. But this instinct, when left unchecked, is one of the most reliable ways to slow a team down.
 
 "Build it from scratch" has a seductive logic: we'll have full control, it will fit our exact needs, and we won't be dependent on a third party. What it often produces is: an authentication system with undiscovered security vulnerabilities, a file upload implementation that breaks on edge cases, an email notification system that nobody fully understands, and months of engineering time spent on problems that have already been solved.
 
@@ -19,7 +19,7 @@ Every developer has an internal instinct to build things. It's part of what make
 
 ### Every custom solution requires ongoing maintenance
 
-When you build a custom authentication system, you're not just writing code once. You're committing to maintaining that code: fixing bugs, applying security patches, updating dependencies, supporting new use cases as the product evolves. The initial build is the smallest investment — the long tail of maintenance is where the true cost lives.
+When you build a custom authentication system, you're not just writing code once. You're committing to maintaining that code: fixing bugs, applying security patches, updating dependencies, supporting new use cases as the product evolves. The initial build is the smallest investment; the long tail of maintenance is where the true cost lives.
 
 This is true for every custom component: email templates, file upload handling, user management, notification systems. Each one is a maintenance burden that competes with feature development for engineering time.
 
@@ -45,7 +45,7 @@ Not everything should be off-the-shelf. Building from scratch is worth the inves
 
 - **The problem is genuinely your core differentiation.** If your unique value is in the thing you're building, the engineering investment is justified.
 - **Existing solutions genuinely don't fit.** Some domains have unusual requirements that existing tools don't handle well. This is less common than developers assume, but it does happen.
-- **You have specific compliance or customization requirements that managed solutions can't meet.** Though it's worth verifying this assumption rather than assuming it — many modern platforms are more flexible than their documentation suggests.
+- **You have specific compliance or customization requirements that managed solutions can't meet.** Though it's worth verifying this assumption rather than assuming it; many modern platforms are more flexible than their documentation suggests.
 - **You have the engineering capacity to maintain it properly.** Building something you can't maintain is building a future problem.
 
 The honest assessment most teams need to make: for how many of their current custom solutions does any of the above actually apply?
@@ -60,18 +60,18 @@ Before building anything from scratch, ask:
 4. **What's the opportunity cost?** What product work doesn't happen because we're spending time on this?
 5. **What do we gain from custom?** Is the control, flexibility, or cost savings from building custom actually material?
 
-If there's a good existing solution, the maintenance cost is significant, there are security risks in custom implementations, the opportunity cost is real, and the gain from custom is marginal — you should use the existing solution.
+If there's a good existing solution, the maintenance cost is significant, there are security risks in custom implementations, the opportunity cost is real, and the gain from custom is marginal; you should use the existing solution.
 
 ## Appwrite: the backend you stop building from scratch
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 Appwrite directly replaces the categories of infrastructure that teams most commonly rebuild from scratch unnecessarily:
 
-- **Authentication**: Email/password with Argon2 hashing, 30+ OAuth providers, phone/SMS, anonymous sessions, MFA, password history, dictionary checks, and brute-force protection — implemented correctly and maintained by the Appwrite team, not yours.
+- **Authentication**: Email/password with Argon2 hashing, 30+ OAuth providers, phone/SMS, anonymous sessions, MFA, password history, dictionary checks, and brute-force protection, implemented correctly and maintained by the Appwrite team, not yours.
 - **Database with API**: Create collections, define schema and indexes, and query immediately. No custom API layer to build or maintain.
 - **File storage**: Managed uploads with per-user access controls, image transformations, and antivirus scanning. No S3 configuration, no upload URL generation, no access control middleware.
-- **Background functions**: Serverless functions triggered by HTTP, events, or schedules — covering the asynchronous processing that most applications need without a custom job queue.
+- **Background functions**: Serverless functions triggered by HTTP, events, or schedules, covering the asynchronous processing that most applications need without a custom job queue.
 - **Real-time**: WebSocket subscriptions that let your UI react to data changes, without building a real-time server.
 - **Messaging**: Push notifications, email, and SMS sending through a unified API with topic-based subscriber management.
 
@@ -83,7 +83,7 @@ The discipline of knowing what not to build is as important as the ability to bu
 
 [Appwrite](https://appwrite.io) is built around this philosophy: a single platform that handles authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging. Development time goes toward what makes your application unique. Try [Appwrite Cloud](https://cloud.appwrite.io) for free or review the [documentation](https://appwrite.io/docs) to see how much backend infrastructure you can stop building from scratch.
 
-- [Appwrite Documentation](https://appwrite.io/docs)
+- [Appwrite Storage docs](https://appwrite.io/docs/products/storage)
 - [Sign up for Appwrite Cloud](https://cloud.appwrite.io)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [Appwrite Functions docs](https://appwrite.io/docs/products/functions)

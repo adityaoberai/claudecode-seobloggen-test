@@ -68,7 +68,7 @@ The setup time for all of the above on Appwrite, to a level equivalent in functi
 
 ## What happens with the saved time
 
-The 4-6 weeks of development time saved by using a managed backend doesn't disappear — it redirects. For a typical product, this is the difference between:
+The 4-6 weeks of development time saved by using a managed backend doesn't disappear; it redirects. For a typical product, this is the difference between:
 
 - Launching in 3 months versus 5 months
 - Building 5 product features in the first sprint versus 1
@@ -83,7 +83,7 @@ The savings don't stop at initial development. Managed backend platforms also re
 - **Security patches** for the authentication system are applied by the platform vendor, not your team
 - **Infrastructure scaling** as user count grows is managed by the platform, not by you provisioning additional database capacity
 - **Dependency updates** for the platform's own dependencies are handled by the vendor
-- **Feature additions** — new OAuth providers, new messaging channels, new database capabilities — arrive as platform updates rather than engineering projects
+- **Feature additions** (new OAuth providers, new messaging channels, new database capabilities) arrive as platform updates rather than engineering projects
 
 A rough estimate: a self-managed backend authentication and database system for a mid-scale application requires 1-2 days of engineering time per month for maintenance, updates, and incident response. A managed backend platform reduces this to near zero for most months.
 
@@ -92,15 +92,15 @@ A rough estimate: a self-managed backend authentication and database system for 
 Using a managed backend platform doesn't remove all backend engineering work:
 
 - **Application-specific business logic** still needs to be written, typically as serverless functions
-- **Data modeling** — designing the right schema for your application's data — is still your work
+- **Data modeling** (designing the right schema for your application's data) is still your work
 - **Integration with third-party services** that aren't provided by the platform (specialized analytics, industry-specific APIs) still requires custom development
-- **Security configuration** — setting appropriate permissions, reviewing access controls — is still your responsibility
+- **Security configuration** (setting appropriate permissions, reviewing access controls) is still your responsibility
 
 The managed platform handles the commodity infrastructure. The custom work that's unique to your product remains yours.
 
 ## How Appwrite saves development time
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 The time savings described in this post are concrete when using Appwrite:
 
@@ -110,7 +110,7 @@ The time savings described in this post are concrete when using Appwrite:
 - **Serverless functions via Git**: Connect a repository, define your function's entry point, and deploy. Functions are triggered by HTTP, events, or schedules. No job queue infrastructure to maintain.
 - **Messaging for notifications**: Push notifications (FCM, APNS), email, and SMS are available through Appwrite's Messaging service. Integrate notification sending in hours rather than days.
 
-The **1-2 day setup estimate** for a production-ready backend is achievable with Appwrite precisely because these components are designed to be configured and used immediately — not assembled from parts.
+The **1-2 day setup estimate** for a production-ready backend is achievable with Appwrite precisely because these components are designed to be configured and used immediately, not assembled from parts.
 
 ## Replace weeks of backend infrastructure work with hours of configuration
 

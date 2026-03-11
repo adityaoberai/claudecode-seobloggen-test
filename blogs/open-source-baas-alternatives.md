@@ -11,11 +11,11 @@ featured: false
 unlisted: true
 ---
 
-Backend-as-a-service has matured into a crowded market. Firebase brought the category to mainstream developer awareness, and since then dozens of platforms have emerged — some proprietary, some open source, some somewhere in between. For teams evaluating their backend options, the open-source tier deserves serious consideration, not just as a cost-saving measure but as a fundamentally different way of thinking about backend ownership.
+Backend-as-a-service has matured into a crowded market. Firebase brought the category to mainstream developer awareness, and since then dozens of platforms have emerged, some proprietary, some open source, some somewhere in between. For teams evaluating their backend options, the open-source tier deserves serious consideration, not just as a cost-saving measure but as a fundamentally different way of thinking about backend ownership.
 
 ## Why proprietary BaaS creates lock-in
 
-Proprietary BaaS platforms — those where the source code is not public and the service is only available as a managed offering — create a specific category of dependency:
+Proprietary BaaS platforms (those where the source code is not public and the service is only available as a managed offering) create a specific category of dependency:
 
 - **You can't leave without rewriting.** When your data model, authentication logic, and real-time subscriptions are built around a proprietary API, migrating to another platform requires significant engineering work.
 - **Pricing is not in your control.** Firebase, in particular, has a history of pricing changes that caught teams off-guard when their applications grew. You discover the true cost of a proprietary platform at scale, not during the evaluation phase.
@@ -29,7 +29,7 @@ Several serious open-source alternatives have emerged. Here's a high-level compa
 
 ## Appwrite as a BaaS alternative
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication (email/password, OAuth2 with 30+ providers, phone/SMS, anonymous sessions, and MFA), a document-oriented database with real-time subscriptions, file storage with granular access controls, serverless functions supporting multiple runtimes (Node.js, Python, Go, PHP, Ruby, Dart, and more), and messaging (push notifications, email, SMS) — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. It can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io). Appwrite is Apache 2.0 licensed, with no restrictions on commercial use.
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server (providing authentication (email/password, OAuth2 with 30+ providers, phone/SMS, anonymous sessions, and MFA), a document-oriented database with real-time subscriptions, file storage with granular access controls, serverless functions supporting multiple runtimes (Node.js, Python, Go, PHP, Ruby, Dart, and more), and messaging (push notifications, email, SMS)) and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. It can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io). Appwrite is Apache 2.0 licensed, with no restrictions on commercial use.
 
 For teams moving away from proprietary BaaS platforms, Appwrite offers the most complete feature coverage of any open-source alternative:
 
@@ -49,7 +49,7 @@ Supabase is an open-source Firebase alternative built on top of PostgreSQL. It p
 
 ### PocketBase
 
-PocketBase is a single-file open-source backend written in Go. It provides authentication, a SQLite-backed database, file storage, and real-time subscriptions. Its simplicity is its primary appeal — a single executable that runs anywhere.
+PocketBase is a single-file open-source backend written in Go. It provides authentication, a SQLite-backed database, file storage, and real-time subscriptions. Its simplicity is its primary appeal: a single executable that runs anywhere.
 
 **Best for:** Small applications, MVPs, and solo developers who want minimal operational overhead and are comfortable with its more limited feature set.
 

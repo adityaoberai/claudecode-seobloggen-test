@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-Running a development agency means context-switching constantly. One client needs an e-commerce platform, another needs a healthcare app, a third wants an internal operations tool. Each project has different requirements — but if each one also uses a different backend stack, you've built yourself an operational nightmare.
+Running a development agency means context-switching constantly. One client needs an e-commerce platform, another needs a healthcare app, a third wants an internal operations tool. Each project has different requirements, but if each one also uses a different backend stack, you've built yourself an operational nightmare.
 
 The most efficient agencies solve this by standardizing. Not by forcing every project into the same shape, but by choosing a backend platform flexible enough to serve diverse client needs while being familiar enough that every developer on the team can hit the ground running.
 
@@ -21,7 +21,7 @@ When each client project uses a different backend technology, the costs compound
 
 - **Onboarding overhead.** A new developer joining the agency has to learn the stack for each active project before they can contribute. If Project A uses Firebase, Project B uses Supabase, and Project C uses a custom Rails API, that's three different mental models to maintain.
 - **Debugging across unfamiliar systems.** When something breaks in production on a project where the original developer has moved on, the team inherits a system they don't know well.
-- **No knowledge reuse.** Solutions built for one client — authentication flows, file upload handling, role-based access patterns — can't easily be reused across clients if the underlying platforms differ.
+- **No knowledge reuse.** Solutions built for one client (authentication flows, file upload handling, role-based access patterns) can't easily be reused across clients if the underlying platforms differ.
 - **Inconsistent security posture.** Different platforms have different security defaults. Standardizing means your security practices travel with your stack.
 - **Longer estimation and scoping.** When a developer scopes a new project on a familiar platform, they can estimate accurately. Unfamiliar platforms introduce risk that's hard to price.
 
@@ -48,7 +48,7 @@ Agencies that have standardized their backend stack typically follow a pattern:
 
 **4. Use the platform's organizational features.** Most backend platforms offer organizations, teams, or workspaces for managing multiple projects. Use them consistently so there's a clear structure that any team member can navigate.
 
-**5. Document your patterns, not just the platform.** Your team's specific conventions — how you name collections, how you structure permissions, how you handle file uploads — should be documented alongside the platform documentation.
+**5. Document your patterns, not just the platform.** Your team's specific conventions (how you name collections, how you structure permissions, how you handle file uploads) should be documented alongside the platform documentation.
 
 ## Evaluating a backend platform for agency use
 
@@ -56,18 +56,18 @@ When choosing a platform to standardize on, test it against a realistic agency p
 
 - How long does it take to spin up a new project from scratch?
 - Can you replicate a project structure for a new client without starting from zero?
-- How does it handle multiple environments — development, staging, production?
+- How does it handle multiple environments (development, staging, production)?
 - Is there a CLI or API for automating project setup?
 - How are credentials and secrets managed across multiple projects?
 - Can clients get access to their own data without accessing your team's account?
 
 ## Appwrite for agency teams
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 Appwrite is particularly well-suited to agency workflows:
 
-- **Project isolation**: Appwrite's project-based structure gives each client their own authentication system, database, storage, and functions within a clean, isolated boundary — while remaining manageable from a single Appwrite installation or organization.
+- **Project isolation**: Appwrite's project-based structure gives each client their own authentication system, database, storage, and functions within a clean, isolated boundary, while remaining manageable from a single Appwrite installation or organization.
 - **Fast project setup**: The [Appwrite CLI](https://appwrite.io/docs/tooling/command-line/installation) supports scripted project creation and configuration, making it straightforward to automate new client environment setup from a template.
 - **Full-stack coverage**: Authentication, databases, storage, functions, real-time, and messaging in one platform means fewer third-party integrations to manage per project and a consistent mental model across all client work.
 - **Self-hosting for regulated clients**: Agencies working with enterprise or compliance-sensitive clients can deploy Appwrite within those clients' own cloud accounts, satisfying data residency requirements without switching to a different backend stack.
@@ -79,7 +79,7 @@ Standardization is one of the highest-leverage decisions an agency can make. The
 
 [Appwrite](https://appwrite.io) is particularly well-suited for agency use. Its project-based structure isolates each client's data, authentication, storage, and functions within a clean boundary. The [Appwrite CLI](https://appwrite.io/docs/tooling/command-line/installation) supports scripted project setup, making it straightforward to automate the creation of new client environments. Appwrite's self-hosting option means agencies working with enterprise or regulated clients can deploy within those clients' own cloud accounts when required. With authentication, databases, storage, functions, and messaging all in one platform, there's very little that a typical agency project requires that Appwrite doesn't cover.
 
-- [Appwrite Documentation](https://appwrite.io/docs)
+- [Appwrite Teams documentation](https://appwrite.io/docs/products/auth/teams)
 - [Appwrite CLI docs](https://appwrite.io/docs/tooling/command-line/installation)
 - [Appwrite Sites documentation](https://appwrite.io/docs/products/sites)
 - [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

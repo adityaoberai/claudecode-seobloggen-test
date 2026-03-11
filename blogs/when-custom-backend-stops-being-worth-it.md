@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-There's a point in many small teams' development journey where the backend they built — once a source of pride and flexibility — starts feeling like a liability. Deployments take longer than they used to. A security update broke something unexpectedly. The one person who understands the authentication system is on vacation. Every new feature requires touching infrastructure that nobody is confident enough to change quickly.
+There's a point in many small teams' development journey where the backend they built (once a source of pride and flexibility) starts feeling like a liability. Deployments take longer than they used to. A security update broke something unexpectedly. The one person who understands the authentication system is on vacation. Every new feature requires touching infrastructure that nobody is confident enough to change quickly.
 
 This is the moment to ask an uncomfortable question: is our custom backend still worth it?
 
@@ -37,10 +37,10 @@ The appeal of building a custom backend is real. You control everything. You can
 
 Not every custom backend is a mistake to continue maintaining:
 
-- If your application has genuinely unique backend requirements — complex business logic, specialized data processing, proprietary algorithms — a custom backend may be the right approach.
+- If your application has genuinely unique backend requirements (complex business logic, specialized data processing, proprietary algorithms), a custom backend may be the right approach.
 - If you have dedicated backend or DevOps engineers whose full-time job is maintaining and improving the infrastructure, the operational burden is someone's actual job.
 - If your scale or compliance requirements rule out managed platforms, custom is sometimes the only option.
-- If you've built something that has become a competitive moat — where the backend architecture itself is part of what makes your product special — that's worth protecting.
+- If you've built something that has become a competitive moat (where the backend architecture itself is part of what makes your product special), that's worth protecting.
 
 The problem is that most small teams don't meet these criteria. They have a custom backend because they built it before managed backend platforms were as capable as they are today.
 
@@ -54,14 +54,14 @@ The fear of migrating away from a custom backend often outweighs the reality. Mo
 
 ## Appwrite as your managed backend
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 What makes Appwrite a strong candidate for teams migrating away from a custom backend:
 
 - **Breadth of coverage**: Authentication, database, storage, functions, real-time, and messaging in one platform means fewer migration steps and fewer new vendors to evaluate separately.
 - **No proprietary lock-in**: Appwrite is Apache 2.0 licensed and fully open source. The APIs follow standard REST conventions. If you ever need to move again, the migration path exists.
 - **Self-hosting option**: Teams that built a custom backend to keep data on their own infrastructure don't have to give that up. Appwrite can be deployed within your own cloud account, satisfying data control requirements while eliminating the maintenance burden of a custom implementation.
-- **Security handled correctly**: The concerns that make custom backends risky — password hashing, brute-force protection, session management — are handled at the platform level using proven implementations (Argon2 for password hashing, configurable rate limiting, secure session tokens).
+- **Security handled correctly**: The concerns that make custom backends risky (password hashing, brute-force protection, session management) are handled at the platform level using proven implementations (Argon2 for password hashing, configurable rate limiting, secure session tokens).
 - **Gradual migration support**: Appwrite's REST API means your existing frontend can call Appwrite endpoints without a full rewrite. Authentication, storage, and database can be migrated service by service rather than all at once.
 
 ## Migrate away from your custom backend before it becomes a blocker

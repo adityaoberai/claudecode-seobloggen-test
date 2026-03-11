@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-Image and file handling is one of those backend concerns that starts simple — upload a photo, store it somewhere, serve it to users — and quickly becomes nuanced. Resize for mobile. Generate thumbnails. Serve optimized formats like WebP. Apply transformations on the fly. Restrict access to certain users. Handle uploads of 50MB videos.
+Image and file handling is one of those backend concerns that starts simple (upload a photo, store it somewhere, serve it to users) and quickly becomes nuanced. Resize for mobile. Generate thumbnails. Serve optimized formats like WebP. Apply transformations on the fly. Restrict access to certain users. Handle uploads of 50MB videos.
 
 Two tools come up frequently in this space: Cloudinary, a dedicated digital asset management and transformation platform, and Appwrite Storage, the file management component of the Appwrite backend platform. They solve overlapping problems but with different priorities. This post breaks down the trade-offs.
 
@@ -19,17 +19,17 @@ Two tools come up frequently in this space: Cloudinary, a dedicated digital asse
 
 Cloudinary is purpose-built for media transformation and delivery. Its strengths are significant:
 
-- **Deep image and video transformation API.** Cloudinary's transformation URL syntax is powerful. Resize, crop, rotate, adjust quality, convert formats, apply AI-powered smart cropping, add overlays and watermarks — all via URL parameters or SDK calls.
+- **Deep image and video transformation API.** Cloudinary's transformation URL syntax is powerful. Resize, crop, rotate, adjust quality, convert formats, apply AI-powered smart cropping, add overlays and watermarks, all via URL parameters or SDK calls.
 - **Global CDN delivery.** Cloudinary operates its own CDN with points of presence worldwide. Transformed images are cached and served close to end users automatically.
-- **AI-powered features.** Background removal, auto-tagging, smart cropping that focuses on faces or focal points, generative fill — these are Cloudinary features that go beyond what most storage services offer.
+- **AI-powered features.** Background removal, auto-tagging, smart cropping that focuses on faces or focal points, generative fill: these are Cloudinary features that go beyond what most storage services offer.
 - **Media management dashboard.** Cloudinary provides a web interface for browsing, organizing, searching, and managing digital assets.
-- **Wide format support.** SVG, GIF, video (including streaming), 3D formats — Cloudinary handles a broad range of media types.
+- **Wide format support.** SVG, GIF, video (including streaming), 3D formats. Cloudinary handles a broad range of media types.
 
-If your application is primarily a media-heavy platform — a social network, a photography app, an e-commerce site with complex product imagery needs — Cloudinary's transformation capabilities are genuinely impressive.
+If your application is primarily a media-heavy platform (a social network, a photography app, an e-commerce site with complex product imagery needs), Cloudinary's transformation capabilities are genuinely impressive.
 
 ## Where Cloudinary creates trade-offs
 
-**Pricing at scale.** Cloudinary's pricing is based on credits — a unit that accounts for storage, transformations, and bandwidth. At low volume, the free tier covers many use cases. At moderate to high volume, costs can escalate quickly, particularly when multiple transformations are applied to many assets. Teams that haven't modeled their usage carefully have been surprised by bills.
+**Pricing at scale.** Cloudinary's pricing is based on credits, a unit that accounts for storage, transformations, and bandwidth. At low volume, the free tier covers many use cases. At moderate to high volume, costs can escalate quickly, particularly when multiple transformations are applied to many assets. Teams that haven't modeled their usage carefully have been surprised by bills.
 
 **Vendor lock-in.** When your image URLs include Cloudinary transformation parameters, your media pipeline is tightly coupled to Cloudinary's infrastructure. Migrating away means regenerating all your media assets and updating URLs throughout your application.
 
@@ -41,9 +41,9 @@ If your application is primarily a media-heavy platform — a social network, a 
 
 Appwrite Storage is a file management service that's part of the broader Appwrite backend platform. It approaches file handling differently:
 
-- **General-purpose file storage.** Store any file type — documents, images, videos, binaries, PDFs. This is broader than a pure media platform.
+- **General-purpose file storage.** Store any file type: documents, images, videos, binaries, PDFs. This is broader than a pure media platform.
 - **Access control at the file and bucket level.** Appwrite's permission system lets you specify exactly which users or teams can read, create, update, or delete files in a given storage bucket. This is important for applications where different users should only access their own files.
-- **Image transformations via URL parameters.** Appwrite Storage supports on-the-fly image transformations through query parameters — resize by width/height, crop, and format conversion. The transformation feature set is more limited than Cloudinary's but covers the most common use cases.
+- **Image transformations via URL parameters.** Appwrite Storage supports on-the-fly image transformations through query parameters (resize by width/height, crop, and format conversion). The transformation feature set is more limited than Cloudinary's but covers the most common use cases.
 - **Antivirus scanning.** Appwrite can integrate with ClamAV to scan uploaded files for malware, which is important for applications that accept user uploads.
 - **Input validation.** You can configure each storage bucket with allowed file types, minimum and maximum file sizes, and other constraints that are enforced server-side.
 - **Self-hostable.** The entire Appwrite platform, including Storage, can be run on your own infrastructure. Your files stay in your cloud account or your own servers.
@@ -73,22 +73,22 @@ Appwrite Storage is a file management service that's part of the broader Appwrit
 - You need general-purpose file storage alongside authentication, databases, and other backend services
 - Access control at the per-user or per-team level is important for your use case
 - Data ownership and the option to self-host are requirements
-- Your image transformation needs are moderate — resize, crop, format conversion
+- Your image transformation needs are moderate (resize, crop, format conversion)
 - You want predictable pricing that doesn't fluctuate based on transformation volume
 
 For many applications, the right answer is Appwrite Storage for most files and user documents, combined with a CDN layer you control for performance-sensitive media delivery.
 
 ## Appwrite Storage in depth
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 Appwrite Storage is the file management component of the Appwrite platform. Unlike standalone storage or CDN services, it's designed to work in conjunction with Appwrite's authentication and database layers:
 
 - **Permission-aware storage**: Because Appwrite Storage knows about your authenticated users and teams, you can restrict file access to specific users without building a separate access control layer. A file uploaded by User A is not accessible to User B unless you explicitly configure that permission.
-- **Image transformations via `getFilePreview`**: On-the-fly image resizing, cropping (with gravity control), quality adjustment, format conversion (JPEG, PNG, WebP, AVIF, HEIC), border radius, opacity, and rotation — all via URL parameters or SDK calls.
-- **Antivirus scanning**: Integration with ClamAV to automatically scan uploaded files for malware before they're stored — important for any application that accepts user-generated file uploads.
+- **Image transformations via `getFilePreview`**: On-the-fly image resizing, cropping (with gravity control), quality adjustment, format conversion (JPEG, PNG, WebP, AVIF, HEIC), border radius, opacity, and rotation, all via URL parameters or SDK calls.
+- **Antivirus scanning**: Integration with ClamAV to automatically scan uploaded files for malware before they're stored, important for any application that accepts user-generated file uploads.
 - **Bucket-level configuration**: File type allowlists, maximum file size limits, and encryption settings are configured per bucket, not per upload.
-- **Self-hosting**: Appwrite Storage runs entirely within your own infrastructure when self-hosted, meaning files never leave your controlled environment — relevant for compliance and data ownership requirements.
+- **Self-hosting**: Appwrite Storage runs entirely within your own infrastructure when self-hosted, meaning files never leave your controlled environment. This is relevant for compliance and data ownership requirements.
 
 ## Choose file storage based on access control needs, not just transformation depth
 
@@ -97,6 +97,5 @@ Both tools are good at what they're designed for. The trade-offs are about fit, 
 [Appwrite Storage](https://appwrite.io/docs/products/storage) is available as part of [Appwrite Cloud](https://cloud.appwrite.io) or via self-hosting. It integrates naturally with Appwrite's authentication and database systems, making it straightforward to enforce per-user file access without building the access control logic yourself.
 
 - [Appwrite Storage documentation](https://appwrite.io/docs/products/storage)
-- [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
-- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Appwrite Image Transformations](https://appwrite.io/docs/products/storage/images)
 - [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

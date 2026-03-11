@@ -13,7 +13,7 @@ unlisted: true
 
 Every developer who has worked with clients has shipped at least one admin panel, operations dashboard, or internal management tool. These projects share a common characteristic: they're rarely glamorous, but they're almost always urgent. A client needs to manage their user base. An ops team needs to review uploaded documents. A support team needs to search orders.
 
-The problem is that the backend work underlying these tools — authentication with role-based access, database queries, file retrieval — is substantial, and it often has to be rebuilt nearly from scratch for each new project.
+The problem is that the backend work underlying these tools (authentication with role-based access, database queries, file retrieval) is substantial, and it often has to be rebuilt nearly from scratch for each new project.
 
 ## Why internal tools are harder than they look
 
@@ -39,9 +39,9 @@ Tools like Retool, Appsmith, or Budibase let teams build internal tools on top o
 
 ### Use a backend platform with a built-in management console
 
-Backend platforms like Appwrite come with their own console — a fully functional web interface for managing all your application's data, users, files, and settings. For many internal tools, configuring the right collections, permissions, and views in the platform console is all the "internal tool" a team actually needs.
+Backend platforms like Appwrite come with their own console, a fully functional web interface for managing all your application's data, users, files, and settings. For many internal tools, configuring the right collections, permissions, and views in the platform console is all the "internal tool" a team actually needs.
 
-For cases where a custom UI is required, the platform provides the API layer, authentication, and data storage — so the developer only has to build the front end.
+For cases where a custom UI is required, the platform provides the API layer, authentication, and data storage, so the developer only has to build the front end.
 
 ## What makes a backend platform good for internal tool development
 
@@ -49,7 +49,7 @@ For cases where a custom UI is required, the platform provides the API layer, au
 - **Role-based access control.** Granular permissions so different users see and can do different things.
 - **Real-time capabilities.** Dashboards that show live data without polling hacks.
 - **File storage with access controls.** Managed file storage where you can restrict who can view or download which files.
-- **Serverless functions.** For business logic that needs to run on the server — sending emails, transforming data, triggering integrations — without maintaining a separate service.
+- **Serverless functions.** For business logic that needs to run on the server (sending emails, transforming data, triggering integrations) without maintaining a separate service.
 - **Good REST and SDK support.** So the front-end developer can query data, create records, and trigger actions with minimal boilerplate.
 
 ## Building a user management dashboard with Appwrite
@@ -77,19 +77,19 @@ const result = await databases.listDocuments(
 );
 ```
 
-Combined with Appwrite's built-in authentication and team-based permissions, you can give the client's operations team their own login to a custom dashboard that only shows them the data they're authorized to see — without building an authentication system from scratch.
+Combined with Appwrite's built-in authentication and team-based permissions, you can give the client's operations team their own login to a custom dashboard that only shows them the data they're authorized to see, without building an authentication system from scratch.
 
 ## Appwrite as the backend for client dashboards
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 For client dashboard and internal tool work, Appwrite covers the entire backend layer in one integration:
 
-- **Built-in console**: The [Appwrite Console](https://appwrite.io/docs/tooling/console) provides a fully functional interface for browsing, editing, and managing data, users, and files — meeting many internal tool requirements without any custom development.
+- **Built-in console**: The [Appwrite Console](https://appwrite.io/docs/tooling/console) provides a fully functional interface for browsing, editing, and managing data, users, and files, meeting many internal tool requirements without any custom development.
 - **Authentication with team roles**: Appwrite's teams and memberships system lets you give different client staff members appropriate access levels to their project data, with no shared passwords or custom role logic to build.
-- **Real-time subscriptions**: Dashboards can reflect live data updates using Appwrite's built-in WebSocket subscriptions — no polling required.
+- **Real-time subscriptions**: Dashboards can reflect live data updates using Appwrite's built-in WebSocket subscriptions. No polling required.
 - **File storage with permissions**: Managed file storage where access is controlled per user or team, making document review and approval workflows straightforward to implement.
-- **Serverless functions**: Backend actions triggered from the dashboard — sending notifications, updating records in bulk, integrating with third-party services — can be implemented as Appwrite Functions without maintaining a separate server.
+- **Serverless functions**: Backend actions triggered from the dashboard (sending notifications, updating records in bulk, integrating with third-party services) can be implemented as Appwrite Functions without maintaining a separate server.
 
 ## Reduce per-client backend work with a shared platform foundation
 

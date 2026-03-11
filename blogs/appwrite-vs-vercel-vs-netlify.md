@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-If you ask a developer what Vercel and Netlify do, you'll get a clear answer: they host frontend applications. Fast deployments, CDN-delivered static assets, serverless functions for edge logic. They're excellent at what they do. But they're not full-stack platforms — and treating them as the foundation of your entire stack creates architectural gaps that show up later as bugs, security incidents, or features that are much harder to build than they should have been.
+If you ask a developer what Vercel and Netlify do, you'll get a clear answer: they host frontend applications. Fast deployments, CDN-delivered static assets, serverless functions for edge logic. They're excellent at what they do. But they're not full-stack platforms, and treating them as the foundation of your entire stack creates architectural gaps that show up later as bugs, security incidents, or features that are much harder to build than they should have been.
 
 The key question is not which hosting platform is better. It is what each layer of your stack is actually responsible for, and whether your current setup covers the complete surface area of your application's needs.
 
@@ -27,17 +27,17 @@ Vercel and Netlify are frontend deployment and hosting platforms. Their primary 
 
 What they are **not** is a complete backend. Specifically, they don't provide out of the box:
 
-- **A persistent database.** Serverless functions on Vercel or Netlify don't have a built-in database. You bring your own — Postgres on PlanetScale or Neon, a NoSQL database on MongoDB Atlas, or another service.
-- **User authentication.** There is no built-in user management, session handling, or OAuth integration. You bring your own — Auth0, Clerk, NextAuth, or another service.
+- **A persistent database.** Serverless functions on Vercel or Netlify don't have a built-in database. You bring your own: Postgres on PlanetScale or Neon, a NoSQL database on MongoDB Atlas, or another service.
+- **User authentication.** There is no built-in user management, session handling, or OAuth integration. You bring your own: Auth0, Clerk, NextAuth, or another service.
 - **File storage.** No built-in file upload or storage system. Developers typically reach for AWS S3, Cloudflare R2, or similar.
 - **Real-time.** No native WebSocket or real-time subscription primitives.
 - **Server-side business logic with persistent state.** Serverless functions are stateless and short-lived by design.
 
-The result is that building a full application on Vercel or Netlify means stitching together multiple third-party services — one for auth, one for database, one for storage, one for email — each with its own API, SDK, billing, and maintenance burden.
+The result is that building a full application on Vercel or Netlify means stitching together multiple third-party services (one for auth, one for database, one for storage, one for email), each with its own API, SDK, billing, and maintenance burden.
 
 ## What Appwrite is
 
-Appwrite is a full-stack platform. [Appwrite Sites](https://appwrite.io/docs/products/sites) handles frontend hosting and deployment, while the rest of the platform covers the complete backend — authentication, databases, file storage, serverless functions, messaging, and real-time.
+Appwrite is a full-stack platform. [Appwrite Sites](https://appwrite.io/docs/products/sites) handles frontend hosting and deployment, while the rest of the platform covers the complete backend: authentication, databases, file storage, serverless functions, messaging, and real-time.
 
 ### Frontend hosting with Appwrite Sites
 
@@ -70,7 +70,7 @@ Depending on your situation, there are two ways to use Appwrite.
 
 ### Appwrite as your entire stack
 
-Your frontend deploys to Appwrite Sites; your backend — auth, database, storage, functions — runs in the same Appwrite project. One platform, one dashboard, one billing relationship. Your frontend and backend share the same environment variables and can be managed from a single console with no cross-platform configuration to maintain.
+Your frontend deploys to Appwrite Sites; your backend (auth, database, storage, functions) runs in the same Appwrite project. One platform, one dashboard, one billing relationship. Your frontend and backend share the same environment variables and can be managed from a single console with no cross-platform configuration to maintain.
 
 ```js
 // In a Next.js app deployed to Appwrite Sites
@@ -115,7 +115,7 @@ Both architectures are well-supported. The choice comes down to whether you want
 
 Regardless of where your frontend lives, the more important architectural question is: what handles your backend?
 
-The risk of treating Vercel or Netlify as your complete backend — beyond their serverless function layer — is what might be called the backend gap: the growing list of things your application needs that none of your current services provide.
+The risk of treating Vercel or Netlify as your complete backend (beyond their serverless function layer) is what might be called the backend gap: the growing list of things your application needs that none of your current services provide.
 
 Common manifestations:
 
@@ -125,7 +125,7 @@ Common manifestations:
 - The admin needs to see all user accounts but there's no user management interface
 - An enterprise customer asks about audit logging and there's no answer
 
-Each of these is solvable, but each requires adding another service, learning another API, and maintaining another integration. Appwrite was designed to cover all of these from the start — alongside the frontend hosting layer.
+Each of these is solvable, but each requires adding another service, learning another API, and maintaining another integration. Appwrite was designed to cover all of these from the start, alongside the frontend hosting layer.
 
 ## Choose your stack based on backend coverage, not just frontend delivery
 
@@ -136,4 +136,4 @@ Vercel and Netlify are excellent at frontend delivery. They're not replacements 
 - [Appwrite Sites documentation](https://appwrite.io/docs/products/sites)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [Appwrite Databases docs](https://appwrite.io/docs/products/databases)
-- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Sign up for Appwrite Cloud](https://cloud.appwrite.io)

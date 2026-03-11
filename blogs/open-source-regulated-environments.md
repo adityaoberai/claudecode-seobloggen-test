@@ -11,20 +11,20 @@ featured: false
 unlisted: true
 ---
 
-Open-source software has become foundational infrastructure for most of the modern web. But when a team building in a regulated industry — healthcare, finance, insurance, government — reaches for an open-source backend library or platform, they encounter a set of questions that don't come up in unregulated development.
+Open-source software has become foundational infrastructure for most of the modern web. But when a team building in a regulated industry (healthcare, finance, insurance, government) reaches for an open-source backend library or platform, they encounter a set of questions that don't come up in unregulated development.
 
 Is the project maintained well enough to trust in a production system? Who's responsible if there's a security vulnerability? What does "open source" mean for our compliance posture? These are the right questions. This post walks through how to think about them.
 
 ## Why regulated industries have specific concerns about open source
 
-Regulated environments require demonstrable controls. A HIPAA audit doesn't care whether your authentication system is custom-built or open source — it asks whether the controls are in place, documented, and tested. The same applies to SOC 2, GDPR, PCI DSS, and FedRAMP.
+Regulated environments require demonstrable controls. A HIPAA audit doesn't care whether your authentication system is custom-built or open source; it asks whether the controls are in place, documented, and tested. The same applies to SOC 2, GDPR, PCI DSS, and FedRAMP.
 
-The concern with open source in regulated environments is not that it's inherently less secure — in many cases, widely-used open-source projects are more rigorously reviewed than proprietary alternatives. The concern is about:
+The concern with open source in regulated environments is not that it's inherently less secure; in many cases, widely-used open-source projects are more rigorously reviewed than proprietary alternatives. The concern is about:
 
 - **Accountability.** Who is responsible for security vulnerabilities in the open-source code you're using?
 - **Maintenance.** Is the project actively maintained, or is it a security incident waiting to happen?
 - **Vendor support.** Can you get a signed agreement, support SLA, or indemnification from the project maintainers?
-- **Known vulnerabilities.** Open-source projects have public CVE histories — good for transparency, but also a question of how quickly issues get patched.
+- **Known vulnerabilities.** Open-source projects have public CVE histories, which is good for transparency, but also a question of how quickly issues get patched.
 
 ## What to evaluate when using open-source tools in regulated contexts
 
@@ -44,11 +44,11 @@ Projects with multiple active maintainers, recent releases, and a clear security
 
 Different open-source licenses have different implications for commercial use and distribution. GPL licenses, for example, have copyleft requirements that may affect how you can distribute your application. MIT and Apache 2.0 licenses are generally permissive.
 
-For regulated environments, license review also matters for compliance audits — auditors sometimes ask for a software bill of materials (SBOM) that includes the licenses of your dependencies.
+For regulated environments, license review also matters for compliance audits; auditors sometimes ask for a software bill of materials (SBOM) that includes the licenses of your dependencies.
 
 ### Self-hosting and data residency
 
-One of the most significant advantages of open-source tools in regulated environments is self-hosting. When you self-host, your data stays in your controlled infrastructure — no third-party BAA required for the backend platform itself (though you'll still need BAAs for the cloud provider hosting your servers).
+One of the most significant advantages of open-source tools in regulated environments is self-hosting. When you self-host, your data stays in your controlled infrastructure. No third-party BAA required for the backend platform itself (though you'll still need BAAs for the cloud provider hosting your servers).
 
 For HIPAA, GDPR, and other data residency-sensitive frameworks, the ability to run software entirely within your own infrastructure is a meaningful compliance simplification.
 
@@ -62,7 +62,7 @@ Open-source software comes with no warranty by default. For many teams in regula
 
 ### Vulnerability tracking
 
-Before adopting an open-source tool, review its CVE history. Frequent vulnerabilities that are quickly patched indicate a mature security process. Infrequent vulnerabilities with slow patches — or a history of vulnerabilities being disclosed publicly before patches were available — are warning signs.
+Before adopting an open-source tool, review its CVE history. Frequent vulnerabilities that are quickly patched indicate a mature security process. Infrequent vulnerabilities with slow patches, or a history of vulnerabilities being disclosed publicly before patches were available, are warning signs.
 
 Integrate vulnerability scanning into your CI/CD pipeline for all open-source dependencies using tools like Snyk, Dependabot, or OWASP Dependency-Check.
 
@@ -77,12 +77,12 @@ When evaluated correctly, open-source tools can actually be an advantage in regu
 
 ## Appwrite in regulated environments
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 Against the evaluation criteria outlined above, Appwrite performs well for regulated environment use:
 
 - **Project health**: Appwrite has an active core development team, frequent releases with a public changelog, and a formal security disclosure process. It is backed by a commercial entity that continues to fund ongoing development.
-- **Self-hosting**: Appwrite is designed first and foremost to be self-hosted. A Docker-based installation runs the full platform within your own infrastructure, in the regions you specify, under your operational control — directly addressing data residency requirements.
+- **Self-hosting**: Appwrite is designed first and foremost to be self-hosted. A Docker-based installation runs the full platform within your own infrastructure, in the regions you specify, under your operational control, directly addressing data residency requirements.
 - **License**: Appwrite uses the Apache 2.0 license, which imposes no restrictions on commercial use and does not require open-sourcing your application code.
 - **Vulnerability management**: Appwrite maintains a public security policy and releases security patches promptly. The open-source codebase means vulnerabilities can be identified through community review, not only internal audits.
 - **Commercial support**: Teams that need formal support agreements or SLAs can engage through Appwrite Cloud, which provides a managed hosting option with defined service terms.

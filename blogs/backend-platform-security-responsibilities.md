@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-When you build on a backend platform — whether that's a cloud provider, a BaaS solution, or a managed database service — you're entering into what the industry calls a "shared responsibility model." The platform secures some things. You secure others. Understanding exactly where that boundary sits is one of the most important security decisions a development team makes.
+When you build on a backend platform (whether that's a cloud provider, a BaaS solution, or a managed database service) you're entering into what the industry calls a "shared responsibility model." The platform secures some things. You secure others. Understanding exactly where that boundary sits is one of the most important security decisions a development team makes.
 
 Get it wrong in one direction and you'll over-invest in controls the platform already handles. Get it wrong in the other and you'll ship an application with critical security gaps you didn't know existed.
 
@@ -19,8 +19,8 @@ Get it wrong in one direction and you'll over-invest in controls the platform al
 
 The shared responsibility model is a framework, originally formalized by cloud providers like AWS and Azure, that divides security duties between the infrastructure provider and the customer. At a high level:
 
-- **The platform is responsible for** securing the underlying infrastructure — physical hardware, network fabric, hypervisors, and the software that runs the managed services themselves.
-- **You are responsible for** securing what runs on top of the platform — your application code, your data, your access policies, and how you configure the platform's services.
+- **The platform is responsible for** securing the underlying infrastructure: physical hardware, network fabric, hypervisors, and the software that runs the managed services themselves.
+- **You are responsible for** securing what runs on top of the platform: your application code, your data, your access policies, and how you configure the platform's services.
 
 The line shifts depending on the service model. With IaaS (Infrastructure as a Service), you manage almost everything above the virtual machine. With PaaS (Platform as a Service) and SaaS-like BaaS platforms, the provider manages more, but you still own your application logic and data security.
 
@@ -39,7 +39,7 @@ When using a well-maintained backend platform, you can generally expect the prov
 
 No matter how capable the platform, these responsibilities remain yours:
 
-- **Application-level access control.** Defining who can access what in your application is your job. Platforms provide permission primitives — RBAC, resource-level policies, team scopes — but how you configure and apply them is entirely up to you.
+- **Application-level access control.** Defining who can access what in your application is your job. Platforms provide permission primitives (RBAC, resource-level policies, team scopes), but how you configure and apply them is entirely up to you.
 - **Your own code security.** SQL injection, XSS, insecure deserialization, and other application-layer vulnerabilities are introduced by your code, not the platform's. Static analysis tools, code review practices, and secure coding standards are your responsibility.
 - **API key and secret management.** Storing API keys securely, rotating them regularly, and ensuring they're never committed to version control is a developer responsibility regardless of which platform you're using.
 - **Data you send to the platform.** The platform secures data at rest, but you control what data you send. Over-collecting sensitive data that doesn't need to be stored is a risk you create.
@@ -51,7 +51,7 @@ No matter how capable the platform, these responsibilities remain yours:
 
 **"The platform handles security."** This is the most dangerous misunderstanding. The platform handles its security. Your application security is still entirely yours.
 
-**"We don't need access control because the data isn't sensitive."** Access control is not only about protecting sensitive data — it's about ensuring application integrity. Unauthenticated users modifying or deleting data causes incidents regardless of whether that data is regulated.
+**"We don't need access control because the data isn't sensitive."** Access control is not only about protecting sensitive data; it's about ensuring application integrity. Unauthenticated users modifying or deleting data causes incidents regardless of whether that data is regulated.
 
 **"Our platform is SOC 2 certified, so we're covered."** SOC 2 certification covers the platform's own controls. It does not certify the security of what you build on top of it.
 
@@ -65,17 +65,17 @@ When evaluating backend platforms, look for those that:
 - Provide granular permission systems that let you enforce least-privilege access
 - Offer audit logging so you can track who accessed what
 - Are transparent about their own security certifications and third-party audits
-- Support security best practices by default — like Argon2 password hashing, session expiration, and rate limiting on authentication endpoints
+- Support security best practices by default, like Argon2 password hashing, session expiration, and rate limiting on authentication endpoints
 
 ## Appwrite's security model
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 Within the shared responsibility model, Appwrite clearly defines what the platform handles versus what you handle:
 
-- **Authentication security**: Appwrite handles password hashing using Argon2, brute-force protection with configurable thresholds, secure session token management, and multi-factor authentication — all implemented correctly at the platform layer so you don't have to.
+- **Authentication security**: Appwrite handles password hashing using Argon2, brute-force protection with configurable thresholds, secure session token management, and multi-factor authentication, all implemented correctly at the platform layer so you don't have to.
 - **Granular permissions**: Appwrite's permission system lets you define access at the database collection, document, storage bucket, and individual file level, making it practical to enforce least-privilege access across your entire data layer.
-- **Transparent codebase**: Because Appwrite is open source, you can review every line of security-relevant code. There is no need to trust vendor claims about what the platform does or doesn't do — you can verify the implementation directly.
+- **Transparent codebase**: Because Appwrite is open source, you can review every line of security-relevant code. There is no need to trust vendor claims about what the platform does or doesn't do; you can verify the implementation directly.
 - **Audit visibility**: Appwrite logs resource events with timestamps and user context, giving your team the trail needed for incident response and compliance reviews.
 
 Your responsibilities remain: your application logic, your access control configuration, your API key management, and your input validation. But Appwrite handles the platform-layer security correctly so you can focus on what's uniquely yours.
@@ -87,4 +87,4 @@ No backend platform removes your responsibility for application security. But ch
 - [Appwrite Security overview](https://appwrite.io/docs/advanced/security)
 - [Appwrite Authentication docs](https://appwrite.io/docs/products/auth)
 - [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
-- [Appwrite Self-Hosting guide](https://appwrite.io/docs/advanced/self-hosting)
+- [Appwrite Audit Logs](https://appwrite.io/docs/advanced/security/audit-logs)

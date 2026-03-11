@@ -30,11 +30,11 @@ As projects mature and teams grow, managed SaaS platforms introduce friction in 
 
 **Cost at scale.** Most managed SaaS backends price based on monthly active users, API calls, database records, or storage volume. These metrics grow with your application, and the costs can grow non-linearly. Teams that haven't modeled their usage trajectory carefully have been unpleasantly surprised.
 
-**Data sovereignty concerns.** For applications serving users in specific regulatory environments — the EU, healthcare in the US, government — the question of where data is stored and who has access to it is not optional. Managed SaaS stores your data on vendor infrastructure. You have contractual guarantees about how it's handled, but you don't have operational control.
+**Data sovereignty concerns.** For applications serving users in specific regulatory environments (the EU, healthcare in the US, government), the question of where data is stored and who has access to it is not optional. Managed SaaS stores your data on vendor infrastructure. You have contractual guarantees about how it's handled, but you don't have operational control.
 
 **Vendor risk.** Managed platforms can change pricing, deprecate features, or shut down. Teams that built their core infrastructure around a vendor's proprietary APIs are exposed to those decisions.
 
-**Limited customizability.** A managed platform provides the features it provides. When you need something it doesn't support — a specific authentication flow, a database index type, a storage configuration — you're dependent on the vendor's roadmap or forced to build a workaround.
+**Limited customizability.** A managed platform provides the features it provides. When you need something it doesn't support (a specific authentication flow, a database index type, a storage configuration), you're dependent on the vendor's roadmap or forced to build a workaround.
 
 **Enterprise customer requirements.** Enterprise buyers increasingly ask where data lives, who can access it, and whether it can be hosted in their own environment. "It's in our vendor's cloud" is often an acceptable answer for individual customers but not for procurement in regulated industries.
 
@@ -46,7 +46,7 @@ If your application must handle data that is subject to GDPR, HIPAA, or similar 
 
 ### Cost predictability at scale
 
-Self-hosted backends have infrastructure costs — compute, storage, bandwidth — that are typically lower and more predictable at scale than the per-seat, per-call pricing models of managed SaaS. Teams running applications with many users or high query volumes often find self-hosting substantially cheaper once past the early scaling phase.
+Self-hosted backends have infrastructure costs (compute, storage, bandwidth) that are typically lower and more predictable at scale than the per-seat, per-call pricing models of managed SaaS. Teams running applications with many users or high query volumes often find self-hosting substantially cheaper once past the early scaling phase.
 
 ### Customization requirements
 
@@ -72,14 +72,14 @@ The operational burden of self-hosting a modern open-source backend is manageabl
 
 ## Appwrite: open-source and managed, in one platform
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
-Appwrite is purpose-built for the path described in this post — starting managed, moving to self-hosted when it makes sense:
+Appwrite is purpose-built for the path described in this post, starting managed, moving to self-hosted when it makes sense:
 
 - **Start managed**: [Appwrite Cloud](https://cloud.appwrite.io) provides a fully managed experience with no infrastructure to configure. The free tier is sufficient for most early-stage applications.
-- **Move to self-hosted**: When data residency, compliance, cost at scale, or customization requirements change the calculus, Appwrite can be deployed on your own infrastructure. The APIs, SDKs, and data models are identical — your application code doesn't change.
+- **Move to self-hosted**: When data residency, compliance, cost at scale, or customization requirements change the calculus, Appwrite can be deployed on your own infrastructure. The APIs, SDKs, and data models are identical; your application code doesn't change.
 - **Open source, Apache 2.0**: Appwrite's code is publicly available and permissively licensed. Your investment in learning the platform and building on its APIs is not at risk from vendor pricing changes or product discontinuation.
-- **Data portability**: Appwrite stores data in standard formats. If you ever need to move, the migration path is your own infrastructure or another data store — not a vendor export format.
+- **Data portability**: Appwrite stores data in standard formats. If you ever need to move, the migration path is your own infrastructure or another data store, not a vendor export format.
 
 ## Start managed, migrate to self-hosted when the economics shift
 

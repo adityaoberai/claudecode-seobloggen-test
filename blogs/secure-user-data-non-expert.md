@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-Security is one of those topics that can feel overwhelming for developers who didn't specialize in it. The threat landscape is complex, the terminology is opaque, and the stakes feel high. But most application security incidents don't happen because developers lacked advanced security knowledge — they happen because basic, well-understood security practices weren't followed.
+Security is one of those topics that can feel overwhelming for developers who didn't specialize in it. The threat landscape is complex, the terminology is opaque, and the stakes feel high. But most application security incidents don't happen because developers lacked advanced security knowledge; they happen because basic, well-understood security practices weren't followed.
 
 The practical steps below move a typical web application from "probably has exploitable vulnerabilities" to "applies current best practices" without requiring a security engineering background.
 
@@ -47,7 +47,7 @@ What to look for in an authentication system:
 
 ### Apply least-privilege access control
 
-Every user in your system should have access to exactly the data and actions they need — no more. This seems obvious but is frequently violated:
+Every user in your system should have access to exactly the data and actions they need. No more. This seems obvious but is frequently violated:
 
 - Users who can read their own profile can also read other users' profiles through predictable ID enumeration
 - Admin functionality is accessible to any authenticated user, not just administrators
@@ -75,17 +75,17 @@ Most hosting platforms (Vercel, Netlify, Railway, etc.) and cloud providers hand
 
 API keys, database connection strings, OAuth client secrets, and encryption keys should never appear in source code, configuration files committed to version control, or client-side JavaScript bundles.
 
-Use environment variables for secrets in all environments. Review your `.gitignore` to ensure `.env` files are excluded. Audit your repository history if you suspect a secret was ever committed — git history is public on public repositories and can be scraped.
+Use environment variables for secrets in all environments. Review your `.gitignore` to ensure `.env` files are excluded. Audit your repository history if you suspect a secret was ever committed, as git history is public on public repositories and can be scraped.
 
 ### Hash passwords, always
 
-If you're implementing any custom credential handling, passwords must be hashed using a modern, slow hashing algorithm: bcrypt, scrypt, or Argon2. Never store plaintext passwords. Never use MD5, SHA-1, or SHA-256 for password storage — these are fast algorithms designed for integrity checking, not password hashing.
+If you're implementing any custom credential handling, passwords must be hashed using a modern, slow hashing algorithm: bcrypt, scrypt, or Argon2. Never store plaintext passwords. Never use MD5, SHA-1, or SHA-256 for password storage; these are fast algorithms designed for integrity checking, not password hashing.
 
 If you're using a managed authentication system, this is handled for you. Verify that it is.
 
 ### Validate and sanitize inputs
 
-Data from users — form submissions, URL parameters, file uploads — must be validated before being used. At minimum:
+Data from users (form submissions, URL parameters, file uploads) must be validated before being used. At minimum:
 - Validate that data matches the expected format before processing
 - Sanitize HTML input to prevent XSS (use an established library, not custom string replacement)
 - Use parameterized queries instead of string concatenation for database queries (this prevents SQL injection)
@@ -99,11 +99,11 @@ A significant share of the security work described above is in the authenticatio
 - Rate limiting on authentication endpoints is built in
 - Granular permission systems let you enforce least-privilege access declaratively
 
-The security that remains — input validation, dependency updates, secrets management, HTTPS configuration — is still your responsibility, but it's a much smaller surface area.
+The security that remains (input validation, dependency updates, secrets management, HTTPS configuration) is still your responsibility, but it's a much smaller surface area.
 
 ## Appwrite's built-in security features
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 For developers who aren't security specialists, Appwrite handles the authentication and data access security layer correctly by default:
 
@@ -111,7 +111,7 @@ For developers who aren't security specialists, Appwrite handles the authenticat
 - **Brute-force protection**: Login endpoints have built-in rate limiting and account lockout after repeated failed attempts, protecting against credential stuffing attacks without any configuration.
 - **Secure session management**: Appwrite generates cryptographically secure session tokens, enforces session expiration, and invalidates tokens on logout.
 - **Multi-factor authentication**: MFA can be enabled for your application with minimal configuration, adding a second verification factor for all users or specific user groups.
-- **Granular permissions**: Appwrite's permission system lets you define exactly which users or teams can read, create, update, or delete each resource. Authorization bugs — users accessing data they shouldn't — are prevented at the data layer, not just the UI.
+- **Granular permissions**: Appwrite's permission system lets you define exactly which users or teams can read, create, update, or delete each resource. Authorization bugs (users accessing data they shouldn't) are prevented at the data layer, not just the UI.
 - **Password policies**: Minimum password length, password history, and dictionary checks can be configured to prevent weak or reused credentials.
 
 ## Apply consistent security practices to protect users without a security team
@@ -119,6 +119,6 @@ For developers who aren't security specialists, Appwrite handles the authenticat
 Securing user data doesn't require becoming a security specialist. It requires applying a set of well-documented practices consistently: use managed authentication, enforce least-privilege access, update dependencies, use HTTPS, protect secrets, and validate inputs. With Appwrite handling the authentication and access control layer, your security surface area shrinks to the parts of your application that are genuinely unique.
 
 - [Appwrite Authentication documentation](https://appwrite.io/docs/products/auth)
-- [Appwrite Security overview](https://appwrite.io/docs/advanced/security)
+- [Appwrite Multi-factor Authentication](https://appwrite.io/docs/products/auth/mfa)
 - [Appwrite Databases permissions](https://appwrite.io/docs/products/databases/permissions)
 - [OWASP Top Ten](https://owasp.org/www-project-top-ten/)

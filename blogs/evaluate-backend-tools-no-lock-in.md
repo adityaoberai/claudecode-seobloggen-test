@@ -11,7 +11,7 @@ featured: false
 unlisted: true
 ---
 
-Every backend technology decision creates some amount of lock-in. The question is never "how do I avoid lock-in entirely" — it's "which dependencies are worth taking, and how do I minimize the cost of the ones I take?"
+Every backend technology decision creates some amount of lock-in. The question is never "how do I avoid lock-in entirely"; it's "which dependencies are worth taking, and how do I minimize the cost of the ones I take?"
 
 Developers who've been through a painful migration know the feeling: a decision made early in a project, when the team was small and the requirements were unclear, becomes a constraint years later when the application has grown, the team has changed, and the requirements have evolved in ways nobody anticipated.
 
@@ -100,7 +100,7 @@ Ask:
 
 ## Appwrite and the lock-in question
 
-Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server — providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging — and [Appwrite Sites](https://appwrite.io/docs/products/sites), a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
+Appwrite is an open-source developer infrastructure platform for building web, mobile, and AI apps. It includes both a backend server, providing authentication, databases, file storage, serverless functions, real-time subscriptions, and messaging, and a fully integrated hosting solution for deploying static and server-side rendered frontends. Appwrite can be fully self-hosted on any Docker-compatible infrastructure or used as a managed service through [Appwrite Cloud](https://cloud.appwrite.io).
 
 Scoring Appwrite against the evaluation framework above:
 
