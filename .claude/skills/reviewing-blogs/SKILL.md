@@ -9,7 +9,7 @@ description: Reviews and critiques blog posts in the blogs/ directory against Ap
 
 When asked to review a blog post, read the file at `blogs/<slug>/+page.markdoc`, then evaluate it against every section below. Produce a structured report using the format at the end of this document.
 
-**Before starting:** Fetch `https://appwrite.io/llms.txt` to get the full index of Appwrite docs. Then identify which specific doc pages are relevant to the post's topic and fetch each one individually to use as the ground truth for the accuracy review.
+**Before starting:** Identify which sections of `src/routes/docs/` are relevant to the post's topic, then read those `+page.markdoc` files directly to use as the ground truth for the accuracy review. The docs map to public URLs as `src/routes/docs/{section}/{subsection}/+page.markdoc` → `https://appwrite.io/docs/{section}/{subsection}`. Key sections: `products/{auth,databases,storage,functions,messaging,sites,ai}/`, `quick-starts/`, `tutorials/`, `advanced/{platform,security,self-hosting}/`, `apis/`, `tooling/`.
 
 ## Review checklist
 
@@ -69,7 +69,7 @@ When asked to review a blog post, read the file at `blogs/<slug>/+page.markdoc`,
 
 ### Appwrite accuracy
 
-**Fetch the relevant doc pages before evaluating this section.** Use `https://appwrite.io/llms.txt` to identify which pages apply, then fetch each one. Do not rely on training data — verify every Appwrite-specific claim against the live docs.
+**Read the relevant local doc files before evaluating this section.** Use the directory structure in `src/routes/docs/` to identify which files apply, then read each one. Do not rely on training data — verify every Appwrite-specific claim against the local docs.
 
 - [ ] All Appwrite feature names match the live docs exactly (e.g. "Appwrite Auth" not "Appwrite Authentication")
 - [ ] All API method names, parameters, and signatures match the live docs
@@ -86,7 +86,7 @@ For each inaccuracy found, note: the claim in the post, what the docs actually s
 - [ ] All doc links in the closing section are directly relevant to the post's topic
 - [ ] No filler links to Discord, GitHub, or the Appwrite homepage unless nothing more specific exists
 - [ ] Closing section includes a link to [Appwrite Cloud](https://cloud.appwrite.io) unless the post is specifically about self-hosting
-- [ ] All linked URLs resolve (cross-check against `https://appwrite.io/llms.txt`)
+- [ ] All linked URLs resolve (cross-check against the local doc files in `src/routes/docs/`)
 
 ### Common pitfalls
 
