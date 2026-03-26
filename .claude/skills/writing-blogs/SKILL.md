@@ -39,7 +39,7 @@ The filename (slug) must match the `cover` image path: e.g. `avoid-backend-overe
 2. **Establish the cost** — Why this problem matters in practice.
 3. **Break it down** — Use H1/H2 sections to cover each dimension clearly.
 4. **Concrete guidance** — What to actually do. Be specific.
-5. **Close with a combined CTA and resources section** — Merge "Moving forward" and "Resources" into one section. The heading must be specific to the post's topic (e.g. "Getting started with Appwrite Auth", not "Moving forward"). End with 2-4 relevant doc links fetched from `https://appwrite.io/llms.txt`. Only link to pages directly relevant to the post. Do not include generic links to the homepage, Discord, or GitHub unless nothing more specific exists.
+5. **Close with a combined CTA and resources section** — Merge "Moving forward" and "Resources" into one section. The heading must be specific to the post's topic (e.g. "Getting started with Appwrite Auth", not "Moving forward"). End with 2-4 relevant doc links found by reading the local docs in `src/routes/docs/`. Only link to pages directly relevant to the post. Do not include generic links to the homepage, Discord, or GitHub unless nothing more specific exists.
 
 ## Formatting conventions
 
@@ -74,7 +74,17 @@ Appwrite is an open-source developer infrastructure platform for building web, m
 
 ## Appwrite documentation reference
 
-**Always fetch `https://appwrite.io/llms.txt` before writing a new post.** Use it to find the specific doc pages relevant to that post's topic, then link only to those. Every resource link in a post must be directly relevant to what the post covers. A post about authentication should link to auth docs; a post about storage should link to storage docs. Do not add links to Discord, GitHub, or the homepage unless nothing more specific exists.
+**Always read the relevant local doc files before writing a new post.** The docs live in `src/routes/docs/` as `+page.markdoc` files. Use the directory structure below to locate the pages relevant to the post's topic, read them, then link only to those. Every resource link in a post must be directly relevant to what the post covers. A post about authentication should link to auth docs; a post about storage should link to storage docs. Do not add links to Discord, GitHub, or the homepage unless nothing more specific exists.
+
+The docs map to public URLs as follows: `src/routes/docs/{section}/{subsection}/+page.markdoc` becomes `https://appwrite.io/docs/{section}/{subsection}`. Key sections:
+
+- **Products:** `src/routes/docs/products/{auth,databases,storage,functions,messaging,sites,ai}/`
+- **Quick starts:** `src/routes/docs/quick-starts/{react,nextjs,sveltekit,vue,nuxt,angular,astro,solid,deno,node,go,php,ruby,python,kotlin,java,...}/`
+- **Tutorials:** `src/routes/docs/tutorials/{react,nextjs,sveltekit,nuxt,vue,flutter,android,apple,...}/`
+- **Advanced:** `src/routes/docs/advanced/{platform,security,self-hosting,migrations,integration}/`
+- **APIs:** `src/routes/docs/apis/{realtime,rest,graphql}/`
+- **Tooling:** `src/routes/docs/tooling/{command-line,command-center,assistant,mcp,skills,arena,appwriter}/`
+- **SDKs:** `src/routes/docs/sdks/`
 
 **Prioritize Appwrite Cloud over self-hosting.** When linking to Appwrite, prefer `https://cloud.appwrite.io` over self-hosting documentation. Include a Cloud signup link in the resources section of every post unless the post is specifically about self-hosting or a compliance use case where self-hosting is the core recommendation (e.g. HIPAA, data residency). In CTAs and inline mentions, refer to Appwrite Cloud first and self-hosting as a secondary option.
 
@@ -84,17 +94,17 @@ Copy this checklist and check off items as you complete them:
 
 ```
 Blog Creation Progress:
-- [ ] Step 1: Fetch https://appwrite.io/llms.txt to find relevant doc links
+- [ ] Step 1: Read the relevant local doc files in src/routes/docs/ to find accurate content and links
 - [ ] Step 2: Add the title to BLOG_TITLES.md
 - [ ] Step 3: Create blogs/<slug>/+page.markdoc with correct frontmatter
 - [ ] Step 4: Write the post following the structure and tone guidelines
-- [ ] Step 5: Verify accuracy of all Appwrite-specific claims against the fetched docs
+- [ ] Step 5: Verify accuracy of all Appwrite-specific claims against the local docs
 - [ ] Step 6: Verify slug consistency across filename, cover image path, and internal links
 ```
 
-**Step 1: Fetch the docs index**
+**Step 1: Read the local docs**
 
-Fetch `https://appwrite.io/llms.txt` to identify the specific doc pages for this post's topic.
+Identify the relevant sections from `src/routes/docs/` based on the post's topic. Read those `+page.markdoc` files directly to understand exact feature names, API method names, and configuration options. Use the directory structure described in "Appwrite documentation reference" above to navigate to the right files.
 
 **Step 2: Add to BLOG_TITLES.md**
 
@@ -110,7 +120,7 @@ Follow the post structure pattern and voice/tone guidelines. Refer to the style 
 
 **Step 5: Verify accuracy against Appwrite docs**
 
-Fetch each doc page linked in the post and cross-check every Appwrite-specific claim: feature names, API method names, configuration options, and behavioral descriptions. Correct any discrepancies before finalizing. Do not rely on training data for product details — always verify against the live docs.
+Re-read each local doc file linked in the post and cross-check every Appwrite-specific claim: feature names, API method names, configuration options, and behavioral descriptions. Correct any discrepancies before finalizing. Do not rely on training data for product details — always verify against the local docs.
 
 **Step 6: Verify slug consistency**
 
