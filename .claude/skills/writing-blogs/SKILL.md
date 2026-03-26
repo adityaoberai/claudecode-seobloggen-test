@@ -100,6 +100,7 @@ Blog Creation Progress:
 - [ ] Step 4: Write the post following the structure and tone guidelines
 - [ ] Step 5: Verify accuracy of all Appwrite-specific claims against the local docs
 - [ ] Step 6: Verify slug consistency across filename, cover image path, and internal links
+- [ ] Step 7: Generate and save the cover image
 ```
 
 **Step 1: Read the local docs**
@@ -125,6 +126,23 @@ Re-read each local doc file linked in the post and cross-check every Appwrite-sp
 **Step 6: Verify slug consistency**
 
 Confirm the filename, cover image path, and any internal links all use the same slug.
+
+**Step 7: Generate and save the cover image**
+
+Generate the cover by calling the cover API with the post title as the `text` parameter:
+
+```
+https://cover.appwrite.network/generate?template=default&text=<URL-encoded post title>
+```
+
+Download the response and save it to `static/images/blog/<slug>/cover.png`. Use `curl` to do this in one step:
+
+```bash
+curl -o static/images/blog/<slug>/cover.png \
+  "https://cover.appwrite.network/generate?template=default&text=<URL-encoded post title>"
+```
+
+The `cover` field in the frontmatter must match this path: `/images/blog/<slug>/cover.png`.
 
 ## Style references
 
